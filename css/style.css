@@ -3,7 +3,7 @@
 @import url("blog.css");
 @import url("header.css");
 @import url("footer.css");
-@import url("widescreen.css");
+@import url("mediaqueries.css");
 
 @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Inter:wght@300;600&family=Libre+Baskerville:wght@400;700&display=swap");
 
@@ -58,22 +58,26 @@ a {
 }
 
 a:link {
-    color: var();
-  }
-  
-  a:hover,
-  a:focus {
-    color: var();
-  }
-  
-  a:visited {
-    color: var();
-  }
-  
-  .active {
-    border-bottom: 2px dotted var();
-  }
+  color: var();
+}
 
-  .logo {
-    padding: 1rem;
-  }
+a:hover,
+a:focus {
+  color: var();
+}
+
+a:visited {
+  color: var();
+}
+
+.active {
+  border-bottom: 2px dotted var();
+}
+
+::selection {
+  background-color: purple;
+}
+
+.desktop {
+  display: none;
+}

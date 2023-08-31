@@ -1,13 +1,25 @@
 /* @author Linda Moenstre 2023 - <linda@digitaldesigner.no> */
-@media screen and (min-width: 1366px) {
+
+@media only screen and (min-width: 1024px) {
   html {
     background-color: rgb(251, 250, 245);
   }
+
+  /* .logo {
+    padding: 5rem;
+  } */
+
+  .mobile {
+    visibility: hidden;
+  }
+
+  .desktop {
+    visibility: visible;
+  }
 }
 
-@media screen and (min-width: 1920px) {
+@media only screen and (min-width: 1920px) {
   html {
-    background-color: rgb(255, 248, 238);
     background-image: url(/assets/img/sweetheart-lg-screen-bg.png);
     background-repeat: no-repeat;
     background-position: center;
