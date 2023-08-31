@@ -1,0 +1,79 @@
+/* Author: Linda Moenstre - Digitaldesigner.no 2023 */
+
+@import url("blog.css");
+@import url("header.css");
+@import url("footer.css");
+@import url("widescreen.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Inter:wght@300;600&family=Libre+Baskerville:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* height: 100%; */
+  /* color-scheme: dark light; */
+}
+
+body {
+  /* font-family: "Comforter Brush", cursive;
+  font-family: "Inter", sans-serif;
+  font-family: "Libre Baskerville", serif; */
+  max-width: 1660px;
+  min-height: 100vh;
+  margin: auto;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+a {
+  cursor: pointer;
+  /* text-transform: uppercase; */
+  text-decoration: none;
+}
+
+a:link {
+    color: var();
+  }
+  
+  a:hover,
+  a:focus {
+    color: var();
+  }
+  
+  a:visited {
+    color: var();
+  }
+  
+  .active {
+    border-bottom: 2px dotted var();
+  }
+
+  .logo {
+    padding: 1rem;
+  }
