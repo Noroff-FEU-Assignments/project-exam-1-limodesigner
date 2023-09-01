@@ -78,6 +78,15 @@ a:visited {
   background-color: purple;
 }
 
-.desktop {
-  display: none;
+/* .desktop {
+  visibility: hidden;
+} */
+
+.logo {
+  background-color: aqua;
+  background-image: url("../img/sweetheart-logo_sm.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-height: 469px;
 }
