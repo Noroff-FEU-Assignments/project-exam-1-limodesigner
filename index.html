@@ -50,7 +50,35 @@
     <main>
         <p>Sweetheart Embroidery Online - sew sweet!</p>
     </main>
-    <footer></footer>
+    <footer>
+
+        <div class=" footer-padding">
+            <button class="button open-button cards">Subscribe</button>
+            <dialog class="newsletter" id="modal">
+                <div class="newsletter-bgr"></div>
+                <div class="newsletter-text">
+                    <h2>Enjoy 10 % off</h2>
+                    <p>
+                        your purchase when you join our list! Be the first to know about new
+                        collections, promotions & more.
+                    </p>
+                    <form class="form-modal" method="dialog">
+                        <label for="subscribe" aria-label="Type your email in the form"
+                            title="Type your email in the form">
+                            <input type="email" name="email" class="news" id="subscribe"
+                                placeholder="Type your e-mail here..." class="form__input-modal" />
+                            <div class="form-error" id="emailError">Please enter a valid email</div>
+
+                            <button class="button close-button">Sign up</button>
+                    </form>
+            </dialog>
+        </div>
+
+        <div>
+            <h3 class="copyright">Copyright &copy; 2022 - <span id="currentYear"></span> Rainydays
+            </h3>
+        </div>
+    </footer>
 </body>
 
 </html>
