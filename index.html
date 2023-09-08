@@ -9,6 +9,8 @@
     <meta name="author" content="Linda Moenstre" />
     <meta name="theme-color" content="#fff" />
 
+    <title>Sweetheart Embroidery | Home</title>
+
     <!-- Hotjar Tracking Code for SweeetheartEmbroidery -->
     <script>
         (function (h, o, t, j, a, r) {
@@ -20,15 +22,14 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-
-    <title>Sweetheart Embroidery | Home</title>
-
+    <script src="../js/main.js" defer></script>
+    <script src="../js/components/carousel.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Inter:wght@300;600&family=Libre+Baskerville:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Baskerville:wght@400;700&family=Satisfy&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="favicon.png" sizes="16x16" />
 
 
@@ -36,47 +37,77 @@
 
 <body>
     <noscript>You need to enable Javascript to run this site.</noscript>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
     <header>
-        <a class="skip-to-content screen-reader-text" href="#main">Skip to content</a>
-
-        <div class="logo desktop mobile">
+        <div class="mobile-logo">
+            <a href="index.html"><img src="img/sweetheart_logo-mobile.gif" alt="Click for homepage" class="mobile"></a>
         </div>
-
+        <div class="desktop-logo">
+            <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage"
+                    class="desktop logo"></a>
+        </div>
         <nav>
-
+            <ul class="nav-list">
+                <li><a href="/index.html"><img src="img/" alt="Click for homepage"></a></li>
+                <li><a href="/blogs.html">Blog</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <p>Sweetheart Embroidery Online - sew sweet!</p>
-    </main>
-    <footer>
 
-        <div class=" footer-padding">
-            <button class="button open-button cards">Subscribe</button>
-            <dialog class="newsletter" id="modal">
-                <div class="newsletter-bgr"></div>
-                <div class="newsletter-text">
-                    <h2>Enjoy 10 % off</h2>
-                    <p>
-                        your purchase when you join our list! Be the first to know about new
-                        collections, promotions & more.
-                    </p>
-                    <form class="form-modal" method="dialog">
-                        <label for="subscribe" aria-label="Type your email in the form"
-                            title="Type your email in the form">
-                            <input type="email" name="email" class="news" id="subscribe"
-                                placeholder="Type your e-mail here..." class="form__input-modal" />
-                            <div class="form-error" id="emailError">Please enter a valid email</div>
+    <main class="main">
 
-                            <button class="button close-button">Sign up</button>
-                    </form>
-            </dialog>
+        <div class="carousel-wrapper">
+            <div class="loader" id="loader"></div>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Carousel items will be populated here -->
+                </div>
+                <button class="prev-button">&#10094;</button>
+                <button class="next-button">&#10095;</button>
+            </div>
+
         </div>
 
+    </main>
+    <aside class="subscription__wrapper">
         <div>
-            <h3 class="copyright">Copyright &copy; 2022 - <span id="currentYear"></span> Sweetheart Embroidery Online
+            <p class="subscription__title">Subscribe for a FREE downloadable stitch pattern!</p>
+        </div>
+        <div id="messageSuccess"></div>
+        <form action="subscribe.php" method="POST" autocomplete="on" id="form">
+            <fieldset>
+                <legend>
+                    <span class="hide">Your information:</span>
+                </legend>
+
+                <div class="contact-box">
+                    <label for="name" class="contact-box__label">Name *</label>
+                    <input type="text" class="contact-box__input" id="name" placeholder="Enter your name" required
+                        aria-labelledby="name-label">
+                    <div class="form-error" id="nameError">Please enter your name</div>
+                </div>
+
+                <div class="contact-box">
+                    <label for="email" class="contact-box__label">E-mail *</label>
+                    <input type="email" class="contact-box__input" id="email" placeholder="Enter your email" required
+                        aria-labelledby="email-label">
+                    <div class="form-error" id="emailError">Please enter a valid email</div>
+                </div>
+            </fieldset>
+            <button type="submit" class="button" id="btnsubmit">Sign me up</button>
+        </form>
+    </aside>
+
+    <footer>
+        <div>
+            <h3 class="copyright">Copyright &copy; <span id="currentYear"></span> Sweetheart Embroidery Online
             </h3>
+        </div>
+        <div>
+            <p class="designer">Site by Digitaldesigner</p>
         </div>
     </footer>
 </body>

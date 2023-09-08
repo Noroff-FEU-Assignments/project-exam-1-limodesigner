@@ -1,0 +1,216 @@
+/* Author: Linda Moenstre - Digitaldesigner.no 2023 */
+
+@import url("main.css");
+@import url("carousel.css");
+@import url("blog.css");
+@import url("forms.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Baskerville:wght@400;700&family=Satisfy&display=swap");
+
+:root {
+  --clr-light: #ffffff;
+  --clr-dark: #333333;
+  --clr-neutral-200: #f3f3f3;
+  --clr-neutral-300: #e3e1e0;
+  --clr-neutral-400: #c9c9c9;
+  --clr-neutral-700: #565656;
+  --clr-primary-100: #fceef2;
+  --clr-primary-200: #efd5dd;
+  --clr-primary-400: #bb616c;
+  --clr-primary-600: #993e49;
+  --clr-primary-800: #73353c;
+  --clr-secondary-200: #e8f1f3;
+  --clr-success: #858b76;
+  --clr-error: #73353c;
+  --box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+  --ff-body: "Lato", sans-serif;
+  --ff-heading: "Libre Baskerville", Geogia, serif;
+  --ff-handwriting: "Satisfy", cursive;
+  --fs-300: 14px; /* thin */
+  --fs-400: 18px; /* regular/text */
+  --fs-500: 20px; /* h4 */
+  --fs-600: 24px; /* H3 */
+  --fs-700: 36px; /* H2 */
+  --fs-800: 56px; /* H1 */
+
+  --border-radius: 2px;
+  --space-1: 1rem;
+  --space-2: 2rem;
+  --space-3: 3rem;
+  --space-4: 4rem;
+  --space-5: 5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  background-color: var(--clr-light);
+  margin-left: 0;
+  margin-right: 0;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 2fr 1fr;
+  font-family: var(--ff-body);
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 1660px;
+}
+
+img,
+svg,
+aside {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.4;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+h1 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-800);
+}
+
+h2 {
+  font-family: var(--ff-handwriting);
+  font-size: var(--fs-700);
+}
+
+h3 {
+  font-family: var(--ff-body);
+  font-size: var(--fs-600);
+  font-weight: bold;
+}
+
+h4 {
+  font-size: var(--fs-500);
+}
+
+a {
+  cursor: pointer;
+  /* text-transform: uppercase; */
+  text-decoration: none;
+}
+
+a:link {
+  color: var();
+}
+
+a:hover,
+a:focus {
+  color: var();
+}
+
+a:visited {
+  color: var();
+}
+
+.active {
+  border-bottom: 2px dotted var(--clr-primary-800);
+}
+
+::selection {
+  background-color: var(--clr-primary-200);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  background-color: var(--clr-primary-200);
+  color: var(--clr-dark);
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+aside {
+  width: 100%;
+}
+
+.loader {
+  border: 0.5rem solid var(--clr-primary-200);
+  border-top: 0.5rem solid var(--clr-primary-400);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hide-loader {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (min-width: 1024px) {
+  html {
+    background-color: var(--clr-secondary-200);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html {
+    background-color: var(--clr-light);
+    background-image: url(/img/sweetheart-lg-screen-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

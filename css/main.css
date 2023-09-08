@@ -1,0 +1,92 @@
+/* Author: Linda Moenstre - Digitaldesigner.no 2023 */
+/* header, footer */
+
+header {
+  position: relative;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+}
+
+nav {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-dark);
+  z-index: 100;
+  border-radius: var(--border-radius);
+  padding: var(--space-1) var(--space-2);
+}
+
+nav li {
+  display: inline;
+  margin-right: var(--space-1);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--clr-light);
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list li {
+  margin-right: var(--space-2);
+}
+
+.nav-list a {
+  font-size: var(--fs-600);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--clr-primary-100);
+}
+
+footer {
+  background-color: var(--clr-light);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.copyright {
+  font-size: var(--fs-300);
+  margin-bottom: var(--space-5);
+  margin-bottom: 7rem;
+}
+
+.designer {
+  color: var(--clr-primary-400);
+  font-family: var(--ff-handwriting);
+  margin-bottom: 7rem;
+}
+
+/* ---------- Media Queries -------------*/
+
+@media (max-width: 768px) {
+  .mobile-logo {
+    display: block;
+  }
+  .desktop-logo {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  html {
+    background-color: var(--clr-secondary-200);
+  }
+
+  .mobile-logo {
+    display: none;
+  }
+  .desktop-logo {
+    display: block;
+  }
+}

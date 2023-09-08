@@ -3,14 +3,16 @@ const name = document.querySelector("#name");
 const nameError = document.querySelector("#nameError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
+const subject = document.querySelector("#subject");
+const subjectError = document.querySelector("#subjectError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
 const messageSuccess = document.querySelector("#messageSuccess");
 
-function validateForm(event) {
+function validateForm() {
   event.preventDefault();
 
-  if (checkLength(name.value, 0) === true) {
+  if (checkLength(name.value, 4) === true) {
     nameError.style.display = "none";
   } else {
     nameError.style.display = "block";
@@ -21,8 +23,14 @@ function validateForm(event) {
   } else {
     emailError.style.display = "block";
   }
+  
+   if (checkLength(subject.value, 14) === true) {
+    subjectError.style.display = "none";
+  } else {
+    subjectError.style.display = "block";
+  }
 
-  if (checkLength(message.value, 0) === true) {
+  if (checkLength(message.value, 24) === true) {
     messageError.style.display = "none";
   } else {
     messageError.style.display = "block";
@@ -48,9 +56,10 @@ function checkEmail(email) {
 function messageSubmit(event) {
   event.preventDefault();
   if (
-    checkLength(name.value, 0) &&
+    checkLength(name.value, 4) &&
     checkEmail(email.value) &&
-    checkLength(message.value, 0)
+    checkLength(subject.value, 14) &&
+    checkLength(message.value, 24)
   ) {
     messageSuccess.innerHTML = `<div class="message-success">
                                         <p>Your message was delivered.<br>
