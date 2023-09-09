@@ -38,78 +38,93 @@
 <body>
     <noscript>You need to enable Javascript to run this site.</noscript>
     <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="grid grid__place-items">
+        <header>
+            <div class="mobile-logo">
+                <a href="index.html"><img src="img/sweetheart_logo-mobile.gif" alt="Click for homepage"
+                        class="mobile"></a>
+            </div>
+            <div class="desktop-logo">
+                <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage"
+                        class="desktop logo"></a>
+            </div>
+            <nav class="nav__wrapper">
+                <div class="nav__logo"><a href="/index.html" class="nav__logo-style">S</a></div>
+                <ul class="nav__list">
+                    </li>
+                    <li class="nav__item"><a href="/blogs.html" class="nav__text">Blog</a></li>
+                    <li class="nav__item"><a href="/about.html">About</a></li>
+                    <li class="nav__item"><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <header>
-        <div class="mobile-logo">
-            <a href="index.html"><img src="img/sweetheart_logo-mobile.gif" alt="Click for homepage" class="mobile"></a>
-        </div>
-        <div class="desktop-logo">
-            <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage"
-                    class="desktop logo"></a>
-        </div>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="/index.html"><img src="img/" alt="Click for homepage"></a></li>
-                <li><a href="/blogs.html">Blog</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <main class="main">
 
-    <main class="main">
-
-        <div class="carousel-wrapper">
-            <div class="loader" id="loader"></div>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <!-- Carousel items will be populated here -->
+            <div class="carousel-wrapper">
+                <div class="loader" id="loader"></div>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <!-- Carousel items will be populated here -->
+                    </div>
+                    <button class="prev-button">&#10094;</button>
+                    <button class="next-button">&#10095;</button>
                 </div>
-                <button class="prev-button">&#10094;</button>
-                <button class="next-button">&#10095;</button>
+
+            </div>
+            <aside class="subscription__wrapper">
+                <div>
+                    <p class="subscription__title">Subscribe for a FREE downloadable stitch pattern!</p>
+                </div>
+                <div id="messageSuccess"></div>
+                <form action="subscribe.php" method="POST" autocomplete="on" id="form">
+                    <fieldset>
+                        <legend>
+                            <span class="hide">Your information:</span>
+                        </legend>
+
+                        <div class="contact-box">
+                            <label for="name" class="contact-box__label">Name *</label>
+                            <input type="text" class="contact-box__input" id="name" placeholder="Enter your name"
+                                required aria-labelledby="name-label">
+                            <div class="form-error" id="nameError">Please enter your name</div>
+                        </div>
+
+                        <div class="contact-box">
+                            <label for="email" class="contact-box__label">E-mail *</label>
+                            <input type="email" class="contact-box__input" id="email" placeholder="Enter your email"
+                                required aria-labelledby="email-label">
+                            <div class="form-error" id="emailError">Please enter a valid email</div>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="button" id="btnsubmit">Sign me up</button>
+                </form>
+            </aside>
+
+        </main>
+
+        <footer class="footer__wrapper">
+            <div>
+                <h3 class="copyright">Copyright &copy; <span id="currentYear"></span> Sweetheart Embroidery Online
+                </h3>
             </div>
 
-        </div>
+            <div class="social flex">
+                <a href="#"><img src="img/facebook-icon.svg" alt="Click for Sweetheart Embroidery on Facebook"
+                        class="flex__item"></a>
+                <a href="#"><img src="img/snapchat-icon.svg" alt="Click for Sweetheart Embroidery on Snapchat"
+                        class="flex__item"></a>
+                <a href="#"><img src="img/instagram-icon.svg" alt="Click for Sweetheart Embroidery on Instagram"
+                        class="flex__item"></a>
+                <a href="#"><img src="img/pinterest-icon.svg" alt="Click for Sweetheart Embroidery on Pinterest"
+                        class="flex__item"></a>
+            </div>
 
-    </main>
-    <aside class="subscription__wrapper">
-        <div>
-            <p class="subscription__title">Subscribe for a FREE downloadable stitch pattern!</p>
-        </div>
-        <div id="messageSuccess"></div>
-        <form action="subscribe.php" method="POST" autocomplete="on" id="form">
-            <fieldset>
-                <legend>
-                    <span class="hide">Your information:</span>
-                </legend>
-
-                <div class="contact-box">
-                    <label for="name" class="contact-box__label">Name *</label>
-                    <input type="text" class="contact-box__input" id="name" placeholder="Enter your name" required
-                        aria-labelledby="name-label">
-                    <div class="form-error" id="nameError">Please enter your name</div>
-                </div>
-
-                <div class="contact-box">
-                    <label for="email" class="contact-box__label">E-mail *</label>
-                    <input type="email" class="contact-box__input" id="email" placeholder="Enter your email" required
-                        aria-labelledby="email-label">
-                    <div class="form-error" id="emailError">Please enter a valid email</div>
-                </div>
-            </fieldset>
-            <button type="submit" class="button" id="btnsubmit">Sign me up</button>
-        </form>
-    </aside>
-
-    <footer>
-        <div>
-            <h3 class="copyright">Copyright &copy; <span id="currentYear"></span> Sweetheart Embroidery Online
-            </h3>
-        </div>
-        <div>
-            <p class="designer">Site by Digitaldesigner</p>
-        </div>
-    </footer>
+            <div>
+                <p class="designer">Site by Digitaldesigner</p>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

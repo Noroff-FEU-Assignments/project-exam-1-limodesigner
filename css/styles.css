@@ -31,8 +31,11 @@
   --fs-400: 18px; /* regular/text */
   --fs-500: 20px; /* h4 */
   --fs-600: 24px; /* H3 */
-  --fs-700: 36px; /* H2 */
-  --fs-800: 56px; /* H1 */
+  --fs-700: 28px;
+  --fs-800: 36px; /* H2 */
+  --fs-900: 56px; /* H1 */
+
+  --letter-spacing: 2px;
 
   --border-radius: 2px;
   --space-1: 1rem;
@@ -57,20 +60,22 @@
 html {
   color-scheme: light;
   scroll-behavior: smooth;
-  background-color: var(--clr-light);
-  margin-left: 0;
-  margin-right: 0;
+  /* background-color: var(--clr-light); */
+  margin: auto;
   height: 100%;
 }
 
 body {
-  min-height: 100vh;
   font-family: var(--ff-body);
   font-size: 1.125rem;
   line-height: 1.4;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 main {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
   max-width: 1660px;
 }
 
@@ -105,7 +110,7 @@ h1 {
 
 h2 {
   font-family: var(--ff-handwriting);
-  font-size: var(--fs-700);
+  font-size: var(--fs-600);
 }
 
 h3 {
@@ -125,16 +130,16 @@ a {
 }
 
 a:link {
-  color: var();
+  color: var(--clr-primary-200);
 }
 
 a:hover,
 a:focus {
-  color: var();
+  color: var(--clr-primary-400);
 }
 
 a:visited {
-  color: var();
+  color: var(--clr-primary-400);
 }
 
 .active {
@@ -170,6 +175,38 @@ a:visited {
 
 aside {
   width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.flex__item {
+  padding: var(--space-1);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid__even-collums {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid__place-content {
+  place-content: center;
+}
+
+.grid__place-items {
+  place-items: center;
+}
+
+.layout {
+  justify-content: center;
 }
 
 .loader {

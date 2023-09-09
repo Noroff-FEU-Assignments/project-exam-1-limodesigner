@@ -66,6 +66,6 @@ span.hide {
 }
 
 .subscription__title {
-  font-size: 1rem;
-  margin-bottom: 20px;
+font-family: "Baskerville Libre", Georgia, serif;
+font-size: var(--fs-700);
 }
