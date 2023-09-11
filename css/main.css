@@ -34,7 +34,6 @@ nav {
   font-size: var(--fs-800);
   font-weight: 700;
   padding: 0 var(--space-1);
-
   height: 3rem;
 }
 
@@ -53,6 +52,7 @@ nav a:focus {
 
 .nav__list {
   background-color: var(--clr-dark);
+  width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,13 +60,14 @@ nav a:focus {
 }
 
 .nav__list a {
-  font-size: var(--fs-500);
+  font-size: var(--fs-400);
+  font-weight: bold;  
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
 }
 
 .nav__item {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
 }
 
 
