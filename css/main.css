@@ -18,7 +18,7 @@ nav {
 .nav__wrapper {
   display: flex;
   flex-wrap: nowrap;
-  padding: .5rem;
+  padding: 0 1rem;
 }
 
 .nav__logo {
