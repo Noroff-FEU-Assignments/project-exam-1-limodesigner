@@ -107,9 +107,9 @@ footer {
 
 @media (max-width: 768px) {
   .mobile-logo {
-    display: block;
     padding: 1rem 0;
   }
+
   .desktop-logo {
     display: none;
   }
@@ -132,7 +132,6 @@ footer {
     display: none;
   }
   .desktop-logo {
-    display: block;
     max-width: 950px;
     padding: 2rem 1rem;
   }
