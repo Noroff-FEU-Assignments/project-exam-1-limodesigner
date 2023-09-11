@@ -12,12 +12,13 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   z-index: 900;
-  border-radius: var(--border-radius);
+  /* border-radius: var(--border-radius); */
 }
 
 .nav__wrapper {
   display: flex;
   flex-wrap: nowrap;
+  padding: .5rem;
 }
 
 .nav__logo {
