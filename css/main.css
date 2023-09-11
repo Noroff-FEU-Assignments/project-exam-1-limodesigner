@@ -11,7 +11,7 @@ nav {
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: 900;
   border-radius: var(--border-radius);
 }
 
@@ -21,29 +21,41 @@ nav {
 }
 
 .nav__logo {
-  margin-right: 0.75rem;
-}
-
-nav ul {
   background-color: var(--clr-dark);
   border-radius: var(--border-radius);
+  margin-right: 0.5rem;
 }
 
-/* nav li {
-  display: inline;
-} */
+.nav__logo-style {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  font-family: "Baskerville Libre", Georgia, Serif;
+  font-size: var(--fs-800);
+  font-weight: 700;
+  padding: 0 var(--space-1);
+
+  height: 3rem;
+}
 
 nav a {
   font-size: var(--fs-300);
   text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--clr-primary-400);
   color: var(--clr-light);
+  padding: .3rem 1rem;
+  border-radius: var(--border-radius);
 }
 
 .nav__list {
-  list-style: none;
+  background-color: var(--clr-dark);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: var(--border-radius);
 }
 
 .nav__list a {
@@ -55,6 +67,7 @@ nav a {
 .nav__item {
   padding: 0.5rem 1rem;
 }
+
 
 /* -------------- Footer --------------- */
 
@@ -68,6 +81,14 @@ footer {
   place-items: center;
 }
 
+.footer__items {
+  padding: 0 3rem;
+}
+
+.footer__item {
+  padding: 0.75rem 0.35rem;
+}
+
 .copyright {
   font-size: var(--fs-300);
 }
@@ -78,7 +99,7 @@ footer {
 }
 
 .designer {
-  color: var(--clr-primary-400);
+  color: var(--clr-primary-600);
   font-family: var(--ff-handwriting);
 }
 
@@ -91,6 +112,14 @@ footer {
   }
   .desktop-logo {
     display: none;
+  }
+
+  .footer__items {
+    padding: 0;
+  }
+
+  .footer_item img {
+    padding: 5rem 3rem;
   }
 }
 

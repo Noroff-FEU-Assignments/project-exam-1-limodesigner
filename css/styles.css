@@ -9,6 +9,7 @@
 :root {
   --clr-light: #ffffff;
   --clr-dark: #333333;
+
   --clr-neutral-200: #f3f3f3;
   --clr-neutral-300: #e3e1e0;
   --clr-neutral-400: #c9c9c9;
@@ -19,8 +20,10 @@
   --clr-primary-600: #993e49;
   --clr-primary-800: #73353c;
   --clr-secondary-200: #e8f1f3;
+
   --clr-success: #858b76;
   --clr-error: #73353c;
+
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
@@ -99,8 +102,11 @@ select {
 h1,
 h2,
 h3,
-h4 {
+h4,
+li,
+p {
   text-wrap: balance;
+  display: block;
 }
 
 h1 {
@@ -126,7 +132,8 @@ h4 {
 a {
   cursor: pointer;
   /* text-transform: uppercase; */
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 a:link {
