@@ -137,7 +137,7 @@ a {
 }
 
 a:link {
-  color: var(--clr-primary-200);
+  color: var(--clr-light);
 }
 
 a:hover,
@@ -146,7 +146,7 @@ a:focus {
 }
 
 a:visited {
-  color: var(--clr-primary-400);
+  color: var(--clr-primary-200);
 }
 
 .active {

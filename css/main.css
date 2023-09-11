@@ -2,7 +2,7 @@
 /* header, footer */
 
 header {
-  /* position: relative; */
+  position: relative;
   margin: auto;
 }
 
@@ -34,7 +34,6 @@ nav {
   font-size: var(--fs-800);
   font-weight: 700;
   padding: 0 var(--space-1);
-  height: 3rem;
 }
 
 nav a {
@@ -44,15 +43,15 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-primary-600);
   color: var(--clr-light);
-  padding: .3rem 1rem;
+
   border-radius: var(--border-radius);
 }
 
 .nav__list {
   background-color: var(--clr-dark);
-  width: 320px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +60,7 @@ nav a:focus {
 
 .nav__list a {
   font-size: var(--fs-400);
-  font-weight: bold;  
+  padding: 0.3rem 1rem;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
 }
@@ -69,7 +68,6 @@ nav a:focus {
 .nav__item {
   padding: 0.5rem;
 }
-
 
 /* -------------- Footer --------------- */
 
