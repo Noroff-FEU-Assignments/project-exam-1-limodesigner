@@ -5,7 +5,7 @@ const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
 const loader = document.getElementById("loader");
 let startIndex = 0;
-const postsPerPage = 3;
+const postsPerPage = 2;
 
 async function fetchBlogPosts(start, perPage) {
   try {
