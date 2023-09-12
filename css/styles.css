@@ -77,7 +77,6 @@ body {
 }
 
 main {
- 
   background-color: var(--clr-light);
   color: var(--clr-dark);
   max-width: 1660px;
@@ -218,6 +217,9 @@ aside {
 }
 
 .loader {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   border: 0.5rem solid var(--clr-primary-200);
   border-top: 0.5rem solid var(--clr-primary-400);
   border-radius: 50%;
