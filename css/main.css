@@ -2,8 +2,22 @@
 /* header, footer */
 
 header {
+    background-color: var(--clr-light);
   position: relative;
   margin: auto;
+}
+
+.hero {
+  background-image: url(/img/sweetheart-pileofabric.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 550px;
+  padding: 11rem 1rem;
+}
+
+.hero__title {
+  font-size: var(--fs-600);
+  text-transform: uppercase;
 }
 
 nav {
@@ -107,7 +121,7 @@ footer {
 
 @media (max-width: 768px) {
   .mobile-logo {
-    padding: 1rem 0 2rem ;
+    padding: 1rem 0 2rem;
   }
 
   .desktop-logo {
@@ -124,8 +138,6 @@ footer {
 }
 
 @media (min-width: 769px) {
- 
-
   .mobile-logo {
     display: none;
   }
@@ -134,9 +146,24 @@ footer {
     padding: 2rem 1rem;
   }
 
+  .hero {
+    background-image: url(/img/sweetheart-pileofabric_lg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 650px;
+    padding: 17rem 5rem;
+  }
+
   .footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .hero {
+    height: 780px;
+    padding: 20rem 15rem;
   }
 }

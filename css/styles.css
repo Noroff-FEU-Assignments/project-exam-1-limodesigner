@@ -69,6 +69,7 @@ html {
 }
 
 body {
+
   font-family: var(--ff-body);
   font-size: 1.125rem;
   line-height: 1.4;
@@ -85,7 +86,8 @@ main {
 
 img,
 svg,
-aside {
+aside,
+.read-more-button {
   display: block;
   max-width: 100%;
 }
@@ -123,22 +125,21 @@ h2 {
 h3 {
   font-family: var(--ff-body);
   font-size: var(--fs-600);
-  font-weight: bold;
+  font-weight: 600;
+  
 }
 
 h4 {
   font-size: var(--fs-500);
 }
 
-a {
-  cursor: pointer;
-  /* text-transform: uppercase; */
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-
 a:link {
-  color: var(--clr-light);
+  cursor: pointer;
+  font-size: var(--fs-600);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--clr-dark);
 }
 
 a:hover,
@@ -147,11 +148,30 @@ a:focus {
 }
 
 a:visited {
-  color: var(--clr-primary-200);
+  color: var(--clr-primary-800);
 }
 
 .active {
   border-bottom: 2px dotted var(--clr-primary-800);
+}
+
+.read-more-button {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-light);
+  font-size: var(--fs-600);
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: var(--clr-primary-600);
 }
 
 ::selection {
