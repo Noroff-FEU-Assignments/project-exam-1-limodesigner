@@ -1,3 +1,5 @@
+// Author: Linda Moenstre - Digitaldesigner.no 2023
+
 const form = document.querySelector("#form");
 const name = document.querySelector("#name");
 const nameError = document.querySelector("#nameError");
@@ -23,8 +25,8 @@ function validateForm() {
   } else {
     emailError.style.display = "block";
   }
-  
-   if (checkLength(subject.value, 14) === true) {
+
+  if (checkLength(subject.value, 14) === true) {
     subjectError.style.display = "none";
   } else {
     subjectError.style.display = "block";

@@ -24,6 +24,7 @@
     </script>
     <script src="../js/main.js" defer></script>
     <script src="../js/components/carousel.js" defer></script>
+    <script src="../js/blog/getPosts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -49,7 +50,7 @@
         </div>
         <nav class="nav__wrapper">
             <div class="nav__logo"><a href="/index.html" class="nav__logo-style">S</a></div>
-            <ul class="nav__list">
+            <ul class="nav__list nav-button">
                 </li>
                 <li class="nav__item"><a href="/blogs.html" class="nav__text">Blog</a></li>
                 <li class="nav__item"><a href="/about.html">About</a></li>
@@ -60,17 +61,26 @@
 
     <main class="main">
 
-        <div class="carousel-wrapper">
+        <div class="lightgrey">
+            <h1 class="latest-posts">Latest posts</h1>
+        <section class="hero">
             <div class="loader" id="loader"></div>
-            <div class="carousel-container">
+            <div class="carousel-wrapper">
                 <div class="carousel">
                     <!-- Carousel items will be populated here -->
                 </div>
-                <button class="prev-button">&#10094;</button>
-                <button class="next-button">&#10095;</button>
+                <div class="btn-wrapper">
+                    <button class="prev-button">&#10094;</button>
+                    <button class="next-button">&#10095;</button>
+                </div>
             </div>
+        </section>
+    </div>
 
-        </div>
+        <button class="get-posts-button">Load posts</button>
+        <button class="clear-posts-button">Clear posts</button>
+        <textarea name="test" id="postsideenher" cols="125" rows="10"></textarea>
+
         <aside class="subscription__wrapper">
             <div>
                 <p class="subscription__title">Subscribe for a FREE downloadable stitch pattern!</p>
