@@ -3,6 +3,7 @@
 .lightgrey {
   background-color: var(--clr-neutral-200);
   padding: var(--space-2) 0 var(--space-4) 0;
+  margin-bottom: var(--space-2);
 }
 
 .latest-posts {
@@ -20,7 +21,7 @@
   justify-content: center;
   margin: auto;
   transition: transform 0.5s ease-in-out;
-  margin-bottom: var(--space-1);
+ 
 }
 
 .carousel-wrapper {
@@ -65,9 +66,10 @@
 .carousel-item h3 {
   font-size: var(--fs-400);
   color: var(--clr-dark);
+  padding: var(--space-1) .2rem;
 }
 
-.read-more-button {
+/* .read-more-button {
   display: block;
   background-color: red;
   color: white;
@@ -79,8 +81,8 @@
 }
 
 .read-more-button:hover {
-  background-color: darkred; /* Hover effect */
-}
+  background-color: darkred; 
+} */
 
 .prev-button,
 .next-button {
@@ -89,6 +91,7 @@
   transform: translateY(-50%);
   border: none;
   cursor: pointer;
+  background-color: transparent;
   color: var(--clr-dark);
   font-size: 24px;
   padding: 0.5rem;
