@@ -79,7 +79,8 @@ body {
 main {
   background-color: var(--clr-light);
   color: var(--clr-dark);
-  max-width: 1660px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 img,
@@ -245,14 +246,13 @@ aside {
 }
 
 @media only screen and (min-width: 1024px) {
-  html {
-    background-color: var(--clr-secondary-200);
-  }
+  /* html {
+  background-color: var(--clr-secondary-200);
+} */
 }
 
 @media only screen and (min-width: 1920px) {
   html {
-    background-color: var(--clr-light);
     background-image: url(/img/sweetheart-lg-screen-bg.png);
     background-repeat: no-repeat;
     background-position: center;

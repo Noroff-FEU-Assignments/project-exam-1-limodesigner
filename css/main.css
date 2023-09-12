@@ -124,9 +124,7 @@ footer {
 }
 
 @media (min-width: 769px) {
-  html {
-    background-color: var(--clr-secondary-200);
-  }
+ 
 
   .mobile-logo {
     display: none;
