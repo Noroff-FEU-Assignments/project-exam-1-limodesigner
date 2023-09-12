@@ -107,7 +107,7 @@ footer {
 
 @media (max-width: 768px) {
   .mobile-logo {
-    padding: 1rem 0;
+    padding: 1rem 0 2rem ;
   }
 
   .desktop-logo {
