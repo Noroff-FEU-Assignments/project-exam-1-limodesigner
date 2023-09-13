@@ -1,5 +1,116 @@
 /* Author: Linda Moenstre - Digitaldesigner.no 2023 */
 
+.blog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 02rem;
+  padding: 0 1rem;
+}
+
+.blog__header-title {
+  font-family: var(--ff-handwriting);
+}
+
+.blog__header-form {
+  background-color: var(--clr-primary-200);
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+.blog-section {
+  margin: 0 auto;
+}
+
+.blog-post {
+  margin-bottom: 2rem;
+  border-bottom: 1px dashed green;
+}
+
+.blog-post .post-link {
+  text-decoration: none;
+  margin: 1.5rem 0;
+}
+
+.blog-header {
+  color: var(--clr-primary-700);
+  margin: var(--space-1);
+}
+
+.blog-post .post-image {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.blog-post .post-title {
+  margin: 10px 0;
+}
+
+.blog-post .post-excerpt {
+  color: var(--clr-neutral-900);
+  margin-bottom: 10px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: var(--border-radius);
+}
+
+.read-more-button {
+  display: inline-block;
+  background-color: var(--clr-dark);
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+  margin: 1.5rem 0;
+  box-shadow: var(--clr-shadow);
+}
+
+.read-more-button:hover {
+  background-color: var(--clr-primary-700);
+  text-decoration: none;
+}
+
+.blog-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: var(--space-2);
+}
+
+.blog-column-left {
+  background-color: var(--clr-neutral-100);
+  flex: 2;
+  order: 1;
+  min-width: 100%;
+}
+
+.blog-column-right {
+  border-left: 1px dashed var(--clr-primary-400);
+  flex: 1;
+  order: 2;
+  min-width: 100%;
+}
+
+.blog-categories,
+.blog-tags {
+  padding: 0 0 3rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .blog-column-left,
+  .blog-column-right {
+    order: 0;
+    min-width: auto;
+  }
+}
+
+/* blog-wrapper */
 .card__wrapper {
 }
 
@@ -12,11 +123,11 @@
 .card__title {
 }
 
-.tag {
-}
-
 .card__footer {
 }
 
 .card__icon {
+}
+
+.tag {
 }

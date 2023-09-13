@@ -38,7 +38,7 @@
     <noscript>You need to enable Javascript to run this site.</noscript>
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <header class="grid gap grid__place-items">
+    <header class="grid gap place-items">
         <div class="mobile">
             <a href="index.html"><img src="img/sweetheart_logo-mobile.gif" alt="Click for homepage"></a>
         </div>
@@ -46,12 +46,12 @@
             <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage" class="logo"></a>
         </div>
 
-        <div>
+        <div id="mobile-menu" class="mobile-sub-menu">
             <div class="tags__wrapper flex">
 
                 <div class="ruler">
                     <div class="tags__wrapper-content">
-                        <a href="" class="grid grid__place-items">
+                        <a href="" class="grid place-items">
                             <p class="tags__wrapper-order">01</p>
                             <h4 class="tags__wrapper-title">News</h4>
                         </a>
@@ -60,7 +60,7 @@
 
                 <div class="ruler">
                     <div class="tags__wrapper-content">
-                        <a href="" class="grid grid__place-items">
+                        <a href="" class="grid place-items">
                             <p class="tags__wrapper-order">02</p>
                             <h4 class="tags__wrapper-title">Accessories</h4>
                         </a>
@@ -69,7 +69,7 @@
 
                 <div class="ruler">
                     <div class="tags__wrapper-content">
-                        <a href="" class="grid grid__place-items">
+                        <a href="" class="grid place-items">
                             <p class="tags__wrapper-order">03</p>
                             <h4 class="tags__wrapper-title">By machine</h4>
                         </a>
@@ -78,7 +78,7 @@
 
                 <div class="ruler">
                     <div class="tags__wrapper-content">
-                        <a href="" class="grid grid__place-items">
+                        <a href="" class="grid place-items">
                             <p class="tags__wrapper-order">04</p>
                             <h4 class="tags__wrapper-title">By hand</h4>
                         </a>
@@ -87,27 +87,28 @@
 
                 <div class="ruler">
                     <div class="tags__wrapper-content">
-                        <a href="" class="grid grid__place-items">
+                        <a href="" class="grid place-items">
                             <p class="tags__wrapper-order">05</p>
                             <h4 class="tags__wrapper-title">Techniques</h4>
                         </a>
                     </div>
                 </div>
+
                 <div class="ruler">
                     <div class="tags__wrapper-content">
-                        <a href="" class="grid grid__place-items">
+                        <a href="" class="grid place-items">
                             <p class="tags__wrapper-order">06</p>
                             <h4 class="tags__wrapper-title">History</h4>
                         </a>
                     </div>
                 </div>
+
             </div>
-        </div>
         </div>
 
         <nav class="nav__wrapper">
             <div class="nav__logo"><a href="/index.html" class="nav__logo-style">S</a></div>
-            <ul class="nav__list nav-button">
+            <ul class="nav__list">
                 </li>
                 <li class="nav__item"><a href="/blogs.html" class="nav__text">Blog</a></li>
                 <li class="nav__item"><a href="/about.html">About</a></li>
@@ -115,6 +116,7 @@
             </ul>
 
         </nav>
+
     </header>
 
     <main>
@@ -138,9 +140,6 @@
                 </div>
             </article>
         </section>
-
-        <button class="get-posts-button">Load posts</button>
-        <button class="clear-posts-button">Clear posts</button>
         <textarea name="test" id="postsideenher" cols="125" rows="10"></textarea>
 
         <aside class="subscription__wrapper">

@@ -217,20 +217,12 @@ aside {
   display: grid;
 }
 
-.grid__even-collums {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid__place-content {
-  place-content: center;
-}
-
-.grid__place-items {
-  place-items: center;
-}
-
 .gap {
   gap: 1rem;
+}
+
+.place-items {
+  place-items: center;
 }
 
 .loader {
