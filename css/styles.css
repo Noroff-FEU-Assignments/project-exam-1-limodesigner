@@ -69,7 +69,6 @@ html {
 }
 
 body {
-
   font-family: var(--ff-body);
   font-size: 1.125rem;
   line-height: 1.4;
@@ -126,7 +125,6 @@ h3 {
   font-family: var(--ff-body);
   font-size: var(--fs-600);
   font-weight: 600;
-  
 }
 
 h4 {
@@ -137,7 +135,6 @@ a:link {
   cursor: pointer;
   font-size: var(--fs-600);
   font-weight: 600;
-  text-transform: uppercase;
   text-decoration: none;
   color: var(--clr-dark);
 }
@@ -148,7 +145,7 @@ a:focus {
 }
 
 a:visited {
-  color: var(--clr-primary-800);
+  color: var(--clr-neutral-700);
 }
 
 .active {
@@ -218,7 +215,6 @@ aside {
 
 .grid {
   display: grid;
-  gap: 1rem;
 }
 
 .grid__even-collums {
@@ -233,8 +229,8 @@ aside {
   place-items: center;
 }
 
-.layout {
-  justify-content: center;
+.gap {
+  gap: 1rem;
 }
 
 .loader {
