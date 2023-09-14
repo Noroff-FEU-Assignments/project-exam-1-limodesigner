@@ -233,7 +233,8 @@ aside {
 }
 
 .flex__wrapper-item {
-  height: 550px;
+  height: 350px;
+  width: fit-content;
   display: flex;
   border: 1px solid red;
 }
