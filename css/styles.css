@@ -215,9 +215,8 @@ aside {
   max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(375px, 100%), 1fr));
-  gap: 2rem;
+  gap: 1rem;
   justify-items: center;
-  align-items: top;
   margin: 0 auto;
 }
 
@@ -299,13 +298,19 @@ aside {
   display: none;
 }
 
+@media only screen and (min-width: 769px) {
+  .content__wrapper {
+    margin: var(--space-4);
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .flex__wrapper-item {
     height: 550px;
   }
 
-  .content__wrapper {
-    margin: var(--space-4) 0;
+  .order-a {
+    order: 2;
   }
 }
 
