@@ -207,8 +207,7 @@ aside {
 }
 
 .content__wrapper {
-  max-width: 1400px;
-  margin: var(--space-2) 0;
+  margin: var(--space-1) 0;
 }
 
 .grid__wrapper {
@@ -270,7 +269,6 @@ aside {
 .center {
   margin-left: auto;
   margin-right: auto;
-  padding: var(--space-2) 0;
 }
 
 .loader {
@@ -298,9 +296,15 @@ aside {
   display: none;
 }
 
+/* ---------- Media Queries -------------*/
+
 @media only screen and (min-width: 769px) {
   .content__wrapper {
     margin: var(--space-4);
+  }
+
+  .center {
+    padding: var(--space-2) 0;
   }
 }
 

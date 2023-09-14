@@ -118,13 +118,23 @@ footer {
   font-family: var(--ff-handwriting);
 }
 
+
+.footer__items {
+  padding: 0;
+}
+
+.footer_item img {
+  padding: 5rem 3rem;
+}
+
+.mobile {
+  padding: 1rem 0 1rem;
+}
+
 /* ---------- Media Queries -------------*/
 
 @media (max-width: 768px) {
-  .mobile {
-    padding: 1rem 0 2rem;
-  }
-
+ 
   .desktop {
     display: none;
   }
@@ -133,13 +143,10 @@ footer {
     display: none;
   }
 
-  .footer__items {
-    padding: 0;
+  .mobile-sub-menu {
+    display: none;
   }
 
-  .footer_item img {
-    padding: 5rem 3rem;
-  }
 }
 
 @media (min-width: 769px) {
@@ -198,6 +205,10 @@ footer {
 
   footer {
     padding: 0 2rem;
+  }
+
+  .mobile-sub-menu {
+    display: block;
   }
 }
 
