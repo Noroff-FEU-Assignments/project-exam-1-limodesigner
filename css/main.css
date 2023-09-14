@@ -129,6 +129,10 @@ footer {
     display: none;
   }
 
+  .hide {
+    display: none;
+  }
+
   .footer__items {
     padding: 0;
   }
@@ -178,14 +182,22 @@ footer {
 
   .footer__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+  }
+
+  footer {
+    padding: 0 1rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .ruler {
     padding: 0 var(--space-2);
+  }
+
+  footer {
+    padding: 0 2rem;
   }
 }
 

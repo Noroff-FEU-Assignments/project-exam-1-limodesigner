@@ -1,8 +1,38 @@
 /* Author: Linda Moenstre - Digitaldesigner.no 2023 */
 /* contact and subscription */
 
+.contact {
+  max-width: 1440px;
+  /* grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    margin: auto; */
+}
+
+.contact__header {
+  font-family: var(--ff-handwriting);
+  padding: var(--space-2);
+}
+
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  padding: 0 var(--space-2);
+}
+
+.form__wrapper {
+  width: 100%;
+  padding-right: var(--space-1);
+  border: 1px solid blue;
+}
+
+.form__img {
+  margin-top: var(--space-3);
+  padding-left: var(--space-2);
+}
+
 form {
-  padding: 2rem;
+  padding: var(--space-2) 0;
 }
 
 fieldset {
@@ -45,15 +75,31 @@ span.hide {
 }
 
 .form-error {
-  color: rgb(197, 38, 38);
+  color: var(--clr-error);
   display: none;
 }
 
 .message-success {
-  background-color: #eae4dd;
+  background-color: var(--clr-success);
   margin: 50px;
   padding: 20px;
   border-radius: 10px;
+}
+
+.acceccibility__title {
+  text-align: center;
+  padding: var(--space-2) 0 var(--space-1) 0;
+}
+
+.acceccibility__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  padding: 0 var(--space-1);
+}
+
+.accessibility__text p {
+  padding-top: var(--space-1);
 }
 
 /* ----------- subscription ------------- */
@@ -66,6 +112,31 @@ span.hide {
 }
 
 .subscription__title {
-font-family: "Baskerville Libre", Georgia, serif;
-font-size: var(--fs-700);
+  font-family: "Baskerville Libre", Georgia, serif;
+  font-size: var(--fs-700);
+}
+
+@media (max-width: 768px) {
+  .contact__wrapper {
+    
+    grid-auto-flow: row;
+    grid-template-rows: 1fr;
+    }
+
+  .form__wrapper {
+    padding: 0;
+  }
+
+  .acceccibility__wrapper {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid red;
+    padding: var(--space-2);
+    inset: 0;
+  }
+
+  .teammember__img {
+    display: flex;
+    justify-content: center;
+  }
 }

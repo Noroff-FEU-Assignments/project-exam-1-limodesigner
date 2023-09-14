@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="SweetheartEmbroidery Blog - Learn more about embroidery, both on machine and by hand!" />
+        content="Sweetheart Embroidery Online - If you want to contact us, or have any questions, we are eager to assist you!" />
     <meta name="author" content="Linda Moenstre" />
     <meta name="theme-color" content="#fff" />
+
+    <title>Sweetheart Embroidery | Contact us</title>
 
     <!-- Hotjar Tracking Code for SweeetheartEmbroidery -->
     <script>
@@ -20,65 +22,201 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-
-    <title>Contact Sweetheart Embroidery Online</title>
     <script src="./js/contact.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Baskerville:wght@400;700&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-
     <noscript>You need to enable Javascript to run this site.</noscript>
-    <header>
-        <a class="skip-to-content-link" href="#main">
-            Skip to content <!--  https://css-tricks.com/how-to-create-a-skip-to-content-link/ -->
-        </a>
-        <nav></nav>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header class="grid gap place-items">
+        <div class="mobile">
+            <a href="index.html"><img src="img/sweetheart_logo-mobile.gif" alt="Click for homepage"></a>
+        </div>
+        <div class="desktop">
+            <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage" class="logo"></a>
+        </div>
+
+        <div id="mobile-menu" class="mobile-sub-menu">
+            <div class="tags__wrapper flex">
+
+                <div class="ruler">
+                    <div class="tags__wrapper-content">
+                        <a href="" class="grid place-items">
+                            <p class="tags__wrapper-order">01</p>
+                            <h4 class="tags__wrapper-title">News</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ruler">
+                    <div class="tags__wrapper-content">
+                        <a href="" class="grid place-items">
+                            <p class="tags__wrapper-order">02</p>
+                            <h4 class="tags__wrapper-title">Accessories</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ruler">
+                    <div class="tags__wrapper-content">
+                        <a href="" class="grid place-items">
+                            <p class="tags__wrapper-order">03</p>
+                            <h4 class="tags__wrapper-title">By machine</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ruler">
+                    <div class="tags__wrapper-content">
+                        <a href="" class="grid place-items">
+                            <p class="tags__wrapper-order">04</p>
+                            <h4 class="tags__wrapper-title">By hand</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ruler">
+                    <div class="tags__wrapper-content">
+                        <a href="" class="grid place-items">
+                            <p class="tags__wrapper-order">05</p>
+                            <h4 class="tags__wrapper-title">Techniques</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ruler">
+                    <div class="tags__wrapper-content">
+                        <a href="" class="grid place-items">
+                            <p class="tags__wrapper-order">06</p>
+                            <h4 class="tags__wrapper-title">History</h4>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <nav class="nav__wrapper">
+            <div class="nav__logo"><a href="/index.html" class="nav__logo-style">S</a></div>
+            <ul class="nav__list">
+                </li>
+                <li class="nav__item"><a href="/blogs.html" class="nav__text">Blog</a></li>
+                <li class="nav__item"><a href="/about.html">About</a></li>
+                <li class="nav__item"><a href="/contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
     </header>
-    <main>
 
-        <div id="messageSuccess"></div>
-        <form action="" autocomplete="on" id="form">
-            <fieldset>
-                <legend>
-                    <span class="hide">Your information:</span>
-                </legend>
+    <main class="contact">
+        <h1 class="contact__header">Contact us</h1>
+        <div class="contact__wrapper">
+            <div class="form__wrapper">
+                <div id="messageSuccess"></div>
+                <form action="" autocomplete="on" id="form">
+                    <fieldset>
+                        <legend>
+                            <span class="hide">Your information:</span>
+                        </legend>
 
-                <div class="contact-box">
-                    <label for="name" class="contact-box__label">Name *</label>
-                    <input type="text" class="contact-box__input" id="name">
-                    <div class="form-error" id="nameError">Your name should contain more than 5 characters</div>
+                        <div class="contact-box">
+                            <label for="name" class="contact-box__label">Name *</label>
+                            <input type="text" class="contact-box__input" id="name">
+                            <div class="form-error" id="nameError">Your name should contain more than 5 characters</div>
+                        </div>
+
+                        <div class="contact-box">
+                            <label for="email" class="contact-box__label">E-mail *</label>
+                            <input type="text" class="contact-box__input" id="email">
+                            <div class="form-error" id="emailError">Please enter a valid email address</div>
+                        </div>
+
+                        <div class="contact-box">
+                            <label for="message" class="contact-box__label">Subject *</label>
+                            <input type="text" class="contact-box__input" id="subject">
+                            <div class="form-error" id="subjectError">Subject must be 15 or more characters</div>
+                        </div>
+
+                        <div class="contact-box">
+                            <label for="message" class="contact-box__label">Message *</label>
+                            <textarea class="contact-box__textarea" id="message" rows="15"></textarea>
+                            <div class="form-error" id="messageError">Message must be 25 or more characters</div>
+                        </div>
+                    </fieldset>
+                    <button class="button" id="btnsubmit">Submit</button>
+                </form>
+            </div>
+
+            <div class="hide">
+                <img src="img/sweetheart-hello.png"
+                    alt="A sketched wreath of flowers and a welcome to contact us message" class="form__img">
+            </div>
+        </div>
+
+        <img src="img/sewsweet_horizontal-darkgrey.png" alt="" class="center">
+
+        <div>
+            <h2 class="acceccibility__title">Accessibility Statement</h2>
+        </div>
+        <div class="acceccibility__wrapper">           
+                <div class="teammember__img">
+                    <img src="img/sweetheart-teammembers2.jpg" alt="A Sew Sweet teammember smiling">
                 </div>
 
-                <div class="contact-box">
-                    <label for="email" class="contact-box__label">E-mail *</label>
-                    <input type="text" class="contact-box__input" id="email">
-                    <div class="form-error" id="emailError">Please enter a valid email address</div>
-                </div>
-
-                <div class="contact-box">
-                    <label for="message" class="contact-box__label">Subject *</label>
-                    <input type="text" class="contact-box__input" id="subject">
-                    <div class="form-error" id="subjectError">Subject must be 15 or more characters</div>
-                </div>
-
-                <div class="contact-box">
-                    <label for="message" class="contact-box__label">Message *</label>
-                    <textarea class="contact-box__textarea" id="message" rows="15"></textarea>
-                    <div class="form-error" id="messageError">Message must be 25 or more characters</div>
-                </div>
-            </fieldset>
-            <button class="button" id="btnsubmit">Submit</button>
-        </form>
-
-        <div class="email">
-            <p><strong>EMAIL US</strong> <br>
-                email@us.com</p>
+                 <div class="accessibility__text">
+                    <p>We are dedicated to ensuring our website is accessible to all users, striving to meet or exceed
+                        the
+                        WCAG guidelines. We understand that different users may have different accessibility needs. We
+                        value
+                        your feedback and encourage you to contact us regarding any accessibility issues or suggestions
+                        for
+                        improvement.
+                    </p>
+                    <p>Please reach out via email or our contact form. Alternative access options are available upon
+                        request. Your input is essential as we work continuously to enhance accessibility for all our
+                        wonderful readers.
+                    </p>
+                    <p>We encourage our readers to provide feedback on their experience with our website. If you
+                        encounter
+                        any accessibility barriers or have suggestions for improvement, please don't hesitate to contact
+                        us.
+                    </p>
+                    <p>Your feedback matters!</p>
+                </div>            
         </div>
 
     </main>
-    <footer></footer>
+
+    <footer class="footer__wrapper">
+        <div class="footer__item">
+            <h3 class="copyright">Copyright &copy; <span id="currentYear"></span> Sweetheart Embroidery Online
+            </h3>
+        </div>
+
+        <div class="social flex footer__items">
+            <a href="#"><img src="img/facebook-icon.svg" alt="Click for Sweetheart Embroidery on Facebook"
+                    class="footer__item"></a>
+            <a href="#"><img src="img/snapchat-icon.svg" alt="Click for Sweetheart Embroidery on Snapchat"
+                    class="footer__item"></a>
+            <a href="#"><img src="img/instagram-icon.svg" alt="Click for Sweetheart Embroidery on Instagram"
+                    class="footer__item"></a>
+            <a href="#"><img src="img/pinterest-icon.svg" alt="Click for Sweetheart Embroidery on Pinterest"
+                    class="footer__item"></a>
+        </div>
+
+        <div>
+            <p class="designer footer__item">Site by Digitaldesigner</p>
+        </div>
+    </footer>
+    </div>
 </body>
 
 </html>

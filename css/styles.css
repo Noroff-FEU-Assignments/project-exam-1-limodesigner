@@ -131,6 +131,10 @@ h4 {
   font-size: var(--fs-500);
 }
 
+p {
+  padding: 1rem 0;
+}
+
 a:link {
   cursor: pointer;
   font-size: var(--fs-600);
@@ -202,6 +206,42 @@ aside {
   width: 100%;
 }
 
+.content__wrapper {
+  max-width: 1400px;
+  margin: 2rem 0;
+}
+
+.grid__wrapper {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.grid__wrapper-columns {
+  padding: 0 1rem;
+}
+
+.flex__wrapper {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  border: 1px solid blue;
+}
+
+.flex__wrapper-item {
+  height: 550px;
+  display: flex;
+  border: 1px solid red;
+}
+
+.no__padding {
+  padding: 0;
+}
+
 .flex {
   display: flex;
   justify-content: space-evenly;
@@ -223,6 +263,12 @@ aside {
 
 .place-items {
   place-items: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--space-2) 0;
 }
 
 .loader {
