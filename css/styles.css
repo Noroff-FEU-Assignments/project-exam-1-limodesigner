@@ -229,14 +229,12 @@ aside {
   width: 100%;
   display: flex;
   overflow-x: scroll;
-  border: 1px solid blue;
 }
 
 .flex__wrapper-item {
   height: 350px;
   width: fit-content;
   display: flex;
-  border: 1px solid red;
 }
 
 .no__padding {
@@ -301,9 +299,9 @@ aside {
 }
 
 @media only screen and (min-width: 1024px) {
-  /* html {
-  background-color: var(--clr-secondary-200);
-} */
+  .flex__wrapper-item {
+    height: 550px;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
