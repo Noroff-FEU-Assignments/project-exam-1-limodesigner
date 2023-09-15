@@ -73,3 +73,6 @@ function messageSubmit(event) {
 }
 
 form.addEventListener("submit", messageSubmit);
+
+const d = new Date();
+document.getElementById("currentYear").innerHTML = d.getFullYear();
