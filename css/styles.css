@@ -21,7 +21,7 @@
   --clr-primary-800: #73353c;
   --clr-secondary-200: #e8f1f3;
 
-  --clr-success: #858b76;
+  --clr-success: #cfd8b6;
   --clr-error: #73353c;
 
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
@@ -253,6 +253,15 @@ aside {
   padding: 0;
 }
 
+.img__style {
+  max-width: 275px;
+  border-radius: 50%;
+}
+
+.background__style {
+  background-color: var(--clr-primary-100);
+}
+
 .flex {
   display: flex;
   justify-content: space-evenly;
@@ -341,8 +350,6 @@ aside {
 
 @media only screen and (min-width: 1920px) {
   html {
-    background-image: url(/img/sweetheart-lg-screen-bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(/img/sewsweet-backgr.gif);
   }
 }

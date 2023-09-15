@@ -1,13 +1,6 @@
 /* Author: Linda Moenstre - Digitaldesigner.no 2023 */
 /* contact and subscription */
 
-
-.form__wrapper {
-  width: 100%;
-  padding-right: var(--space-1);
-  border: 1px solid blue;
-}
-
 .form__img {
   margin-top: var(--space-3);
   padding-left: var(--space-2);
@@ -21,32 +14,29 @@ fieldset {
   border: none;
 }
 
-
 .contact-box {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-2);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 
 .contact-box__input,
 textarea {
-  height: 3rem;
-  border: 1px solid #333333;
-  border-radius: 4px;
+  height: var(--space-3);
+  border: 1px solid var(--clr-dark);
+  border-radius: var(--border-radius);
   width: 100%;
-  font-size: 1rem;
-  padding: 1rem;
+  padding: var(--space-1);
 }
 
 textarea {
   min-height: 12rem;
 }
 
-/* forms focus styles */
 input:focus,
 textarea:focus {
-  background-color: #eae4dd;
+  background-color: var(--clr-neutral-200);
 }
 
 span.hide {
@@ -54,18 +44,18 @@ span.hide {
 }
 
 .form-error {
-  color: var(--clr-error);
+  background-color: var(--clr-error);
+  color: var(--clr-light);
   display: none;
 }
 
 .message-success {
   background-color: var(--clr-success);
-  margin: 50px;
-  padding: 20px;
-  border-radius: 10px;
+  text-align: center;
+  margin: var(--space-2);
+  padding: var(--space-2);
+  border-radius: 50%;
 }
-
-
 
 /* ----------- subscription ------------- */
 
@@ -82,5 +72,4 @@ span.hide {
 }
 
 @media (max-width: 768px) {
- 
 }

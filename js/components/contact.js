@@ -66,7 +66,6 @@ function messageSubmit(event) {
     messageSuccess.innerHTML = `<div class="message-success">
                                         <p>Your message was delivered.<br>
                                         We will contact you soon.</p>
-                                        <p>If you are in a hurry, please call us - we would love to help you!</p>
                                     </div>`;
     form.reset();
   }
