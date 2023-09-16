@@ -2,35 +2,147 @@
 /* header, footer */
 
 header {
-  background-color: var(--clr-light);
   position: relative;
-  inset: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-.hero {
-  background-image: url(/img/sweetheart-pileofabric.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 550px;
-  padding: 11rem 1rem;
+.desktop {
+  max-width: 950px;
+  margin: var(--space-3) var(--space-2);
 }
 
-.hero__title {
-  font-size: var(--fs-600);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
+/* ---------------- NAV ---------------- */
 
 nav {
   position: fixed;
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 900;
-  /* border-radius: var(--border-radius); */
+  z-index: 100;
 }
 
-.nav__wrapper {
+nav a {
+  font-family: var(--ff-heading);
+  color: var(--clr-light);
+  padding: var(--space-1);
+}
+
+.navmenu {
+  height: 100vh;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--clr-dark);
+  opacity: 95%;
+  padding-left: var(--space-1);
+}
+
+.navmenu__list {
+  margin-top: var(--space-2);
+}
+
+.ruler {
+  border-right: 1px solid var(--clr-dark);
+  /* padding: 0 1rem; */
+}
+
+.ruler:nth-child(6) {
+  border-right: 0;
+}
+
+/* skal vises som linje under logo på desktop)
+.navmenu__submenu {
+  /* border: 1px solid green; */
+/* } */
+
+.navmenu__list-items:hover,
+.navmenu__list-items:focus {
+  color: var(--clr-primary-200);
+}
+
+.navmenu__list-item {
+  display: flex;
+  justify-content: start;
+}
+
+.navmenu__list-number {
+  font-size: var(--fs-400);
+  font-weight: 300;
+  color: var(--clr-neutral-400);
+  padding: 0.3rem var(--space-1);
+}
+
+.navmenu__list-title {
+  font-size: var(--fs-600);
+  font-weight: 300;
+}
+
+.navmenu__main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-primary-600);
+  border-radius: var(--border-radius);
+  margin: var(--space-1);
+}
+
+.navmenu__main-link {
+  background-color: var(--clr-dark);
+  border-radius: var(--border-radius);
+}
+
+.navmenu__main-link:hover,
+.navmenu__main-link:focus {
+  background-color: var(--clr-neutral-700);
+  border-radius: var(--border-radius);
+}
+
+.navmenu__main-link-style {
+  font-family: inherit;
+  letter-spacing: var(--letter-spacing);
+}
+
+.navmenu__box {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 300;
+}
+
+.navmenu__box-content {
+  display: flex;
+}
+
+/* 
+.navmenu__box-content::before
+.navmenu__box-content::after {
+content: ";
+
+} */
+
+.navmenu__button {
+  background-color: var(--clr-primary-800);
+  color: var(--clr-light);
+  font-size: var(--fs-600);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  padding: var(--space-1);
+  margin: var(--space-1);
+}
+
+.navmenu__navbar {
+}
+
+.navmenu__icon {
+  font-family: var(--ff-heading);
+  font-weight: bold;
+  font-size: var(--fs-900);
+}
+
+/* .nav__wrapper {
   display: flex;
   flex-wrap: nowrap;
   padding: 0 1rem;
@@ -82,7 +194,7 @@ nav a:focus {
 
 .nav__item {
   padding: 0.5rem;
-}
+} */
 
 /* -------------- Footer --------------- */
 
@@ -118,7 +230,6 @@ footer {
   font-family: var(--ff-handwriting);
 }
 
-
 .footer__items {
   padding: 0;
 }
@@ -127,14 +238,9 @@ footer {
   padding: 5rem 3rem;
 }
 
-.mobile {
-  padding: 1rem 0 1rem;
-}
-
 /* ---------- Media Queries -------------*/
 
 @media (max-width: 768px) {
- 
   .desktop {
     display: none;
   }
@@ -142,39 +248,18 @@ footer {
   .hide {
     display: none;
   }
-
-  .mobile-sub-menu {
-    display: none;
-  }
-
 }
 
 @media (min-width: 769px) {
   .mobile {
     display: none;
   }
-  .desktop {
-    max-width: 950px;
-    padding: 2rem 1rem;
+
+  .navmenu__list-item {
+    flex-direction: column;
   }
 
-  .hero {
-    background-image: url(/img/sweetheart-pileofabric_lg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 650px;
-    padding: 17rem 5rem;
-  }
-
-  .ruler {
-    border-right: 1px solid var(--clr-neutral-400);
-    padding: 0 1rem;
-  }
-
-  .ruler:nth-child(6) {
-    border-right: 0;
-  }
-
+  /* 
   .tags__wrapper-order {
     font-family: var(--ff-heading);
     font-size: var(--fs-300);
@@ -185,7 +270,7 @@ footer {
   .tags__wrapper-title {
     font-family: var(--ff-heading);
     font-size: var(--fs-400);
-  }
+  } */
 
   .footer__wrapper {
     display: flex;
@@ -205,10 +290,6 @@ footer {
 
   footer {
     padding: 0 2rem;
-  }
-
-  .mobile-sub-menu {
-    display: block;
   }
 }
 

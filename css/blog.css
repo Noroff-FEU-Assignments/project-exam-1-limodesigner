@@ -79,7 +79,7 @@
 .blog-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--space-1);
   margin-bottom: var(--space-2);
 }
 

@@ -1,17 +1,5 @@
 /* Author: Linda Moenstre - Digitaldesigner.no 2023 */
 
-.lightgrey {
-  width: 100%;
-  background-color: var(--clr-neutral-200);
-  padding: 1.25rem 0 3rem 0;
-  margin-bottom: var(--space-2);
-}
-
-.latest-posts {
-  font-family: var(--ff-handwriting);
-  text-align: center;
-  padding-bottom: 1rem;
-}
 
 .carousel__section {
   max-width: 1200px;
@@ -27,12 +15,13 @@
   width: 100%;
   overflow: hidden;
   padding: 0 var(--space-2);
+ 
 }
 
 .carousel {
   width: 100%;
   display: flex;
-}
+ }
 
 .carousel img {
   width: 100%;
@@ -41,7 +30,7 @@
 }
 
 .carousel-item {
-  background-color: var(--clr-light);
+  background-color: var(--clr-primary-200);
   flex: 1;
   text-align: center;
   margin: 0 1rem;

@@ -22,10 +22,8 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-    <script src="./js/contact.js" defer></script>
     <script src="./js/main.js" defer></script>
     <script src="../js/components/carousel.js" defer></script>
-    <script src="../js/blog/getPosts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -39,95 +37,78 @@
     <noscript>You need to enable Javascript to run this site.</noscript>
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <header class="grid gap place-items">
+    <header>
         <div class="mobile">
             <a href="index.html"><img src="img/sweetheart_logo-mobile.gif" alt="Click for homepage"></a>
         </div>
         <div class="desktop">
-            <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage" class="logo"></a>
+            <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage"></a>
         </div>
 
-        <div id="mobile-menu" class="mobile-sub-menu">
-            <div class="tags__wrapper flex">
 
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">01</p>
-                            <h4 class="tags__wrapper-title">News</h4>
+        <nav class="navmenu">
+            <ul class="navmenu__list">
+                <div class="navmenu__submenu">
+                    <li class="navmenu__list-items ruler">
+                        <a href="#news" class="mobile navmenu__list-item">
+                            <span class="navmenu__list-number">01</span>
+                            <h4 class="navmenu__list-title">News</h4>
                         </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">02</p>
-                            <h4 class="tags__wrapper-title">Accessories</h4>
+                    </li>
+                    <li class="navmenu__list-items ruler">
+                        <a href="#news" class="mobile navmenu__list-item">
+                            <span class="navmenu__list-number">02</span>
+                            <h4 class="navmenu__list-title">Accessories</h4>
                         </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">03</p>
-                            <h4 class="tags__wrapper-title">By machine</h4>
+                    </li>
+                    <li class="navmenu__list-items ruler">
+                        <a href="#news" class="mobile navmenu__list-item">
+                            <span class="navmenu__list-number">03</span>
+                            <h4 class="navmenu__list-title">By machine</h4>
                         </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">04</p>
-                            <h4 class="tags__wrapper-title">By hand</h4>
+                    </li>
+                    <li class="navmenu__list-items ruler">
+                        <a href="#news" class="mobile navmenu__list-item">
+                            <span class="navmenu__list-number">04</span>
+                            <h4 class="navmenu__list-title">By hand</h4>
                         </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">05</p>
-                            <h4 class="tags__wrapper-title">Techniques</h4>
+                    </li>
+                    <li class="navmenu__list-items ruler">
+                        <a href="#news" class="mobile navmenu__list-item">
+                            <span class="navmenu__list-number">05</span>
+                            <h4 class="navmenu__list-title">Techniques</h4>
                         </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">06</p>
-                            <h4 class="tags__wrapper-title">History</h4>
+                    </li>
+                    <li class="navmenu__list-items ruler">
+                        <a href="#news" class="mobile navmenu__list-item">
+                            <span class="navmenu__list-number">06</span>
+                            <h4 class="navmenu__list-title">History</h4>
                         </a>
-                    </div>
+                    </li>
                 </div>
+                <div class="navmenu__main" id="nav-desktop">
+                    <li class="navmenu__main-link"><a href="blog.html" class="navmenu__main-link-style">Blog</a></li>
+                    <li class="navmenu__main-link"><a href="about.html" class="navmenu__main-link-style">About</a></li>
+                    <li class="navmenu__main-link"><a href="contact.html" class="navmenu__main-link-style">Contact</a>
+                    </li>
 
+                </div>
+            </ul>
+            <div class="navmenu__box">
+            <div class="navmenu__box-content">
+                <div class="navmenu__button"><a href="index.html" class="navmenu__icon">S</a></div>
+                <div class="navmenu__button" id="menubtn"><span class="navmenu__navbar">Close</span></div>
             </div>
         </div>
-
-        <nav class="nav__wrapper">
-            <div class="nav__logo"><a href="/index.html" class="nav__logo-style">S</a></div>
-            <ul class="nav__list">
-                </li>
-                <li class="nav__item"><a href="/blogs.html" class="nav__text">Blog</a></li>
-                <li class="nav__item"><a href="/about.html">About</a></li>
-                <li class="nav__item"><a href="/contact.html">Contact</a></li>
-            </ul>
-
         </nav>
+
+
 
     </header>
 
     <main>
-        <div class="hero">
-            <h3 class="hero__title">Choose the right color</h3>
-            <button class="read-more-button">Read more</button>
-        </div>
-
-        <section class="lightgrey">
-            <h1 class="latest-posts">Latest posts</h1>
+        <section>
+            <h1 class="header__title">Latest posts</h1>
             <article class="carousel__section">
                 <div class="loader" id="loader"></div>
                 <div class="carousel__wrapper">
