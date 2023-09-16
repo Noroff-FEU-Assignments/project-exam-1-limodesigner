@@ -34,7 +34,7 @@ nav a {
   width: 100%;
   bottom: 0;
   background-color: var(--clr-dark);
-  opacity: 95%;
+  opacity: 99%;
   padding-left: var(--space-1);
 }
 
@@ -253,6 +253,10 @@ footer {
 @media (min-width: 769px) {
   .mobile {
     display: none;
+  }
+
+  .navmenu {
+    background-color: transparent;
   }
 
   .navmenu__list-item {
