@@ -24,7 +24,7 @@ fieldset {
 .contact-box__input,
 textarea {
   height: var(--space-3);
-  border: 1px solid var(--clr-dark);
+  border-color: 1px solid var(--clr-neutral-200);
   border-radius: var(--border-radius);
   width: 100%;
   padding: var(--space-1);

@@ -2,10 +2,10 @@
 
 export function showLoader() {
   const loader = document.querySelector(".loader");
-  loader.innerHTML = '<div class="loader"></div>';
+  loader.style.display = "block";
 }
 
 export function hideLoader() {
   const loader = document.querySelector(".loader");
-  loader.innerHTML = "";
+  loader.style.display = "none";
 }

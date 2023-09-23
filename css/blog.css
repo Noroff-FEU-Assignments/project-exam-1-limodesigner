@@ -1,179 +1,88 @@
 /* Author: Linda Moenstre - Digitaldesigner.no 2023 */
 
-.blog__header {
+.blog-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 02rem;
   padding: 0 1rem;
+  color: var(--clr-primary-700);
+  margin: 0 var(--space-2);
 }
 
-.blog__header-title {
+.blog-header__title {
   font-family: var(--ff-handwriting);
 }
 
-.blog__header-form {
+.blog-header__form {
   background-color: var(--clr-primary-200);
   border: none;
   border-radius: var(--border-radius);
 }
 
-.blog-section {
-  margin: 0 auto;
-}
-
-.blog-post {
-  margin-bottom: 2rem;
-  border-bottom: 1px dashed green;
-}
-
-.blog-post .post-link {
-  text-decoration: none;
-  margin: 1.5rem 0;
-}
-
-.blog-header {
-  color: var(--clr-primary-700);
-  margin: var(--space-1);
-}
-
-.blog-post .post-image {
-  max-width: 100%;
-  border-radius: var(--border-radius);
-}
-
-.blog-post .post-title {
-  margin: 10px 0;
-}
-
-.blog-post .post-excerpt {
-  color: var(--clr-neutral-900);
-  margin-bottom: 10px;
-}
-
-.post-content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: var(--border-radius);
-}
-
 .read-more-button {
-  display: inline-block;
-  background-color: var(--clr-dark);
-  color: var(--clr-neutral-100);
-  text-decoration: none;
+  background-color: var(--clr-primary-600);
+  color: var(--clr-light);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   transition: background-color 0.3s ease;
-  margin: 1.5rem 0;
   box-shadow: var(--clr-shadow);
+  margin: var(--space-1);
 }
 
 .read-more-button:hover {
-  background-color: var(--clr-primary-700);
-  text-decoration: none;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-dark);
 }
 
-.blog-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-1);
-  margin-bottom: var(--space-2);
+/* ----blog list page ----*/
+
+.blog-posts-grid {
+  width: min(90%, 1200px);
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+  margin: auto;
 }
 
-.blog-column-left {
-  background-color: var(--clr-neutral-100);
-  flex: 2;
-  order: 1;
-  min-width: 100%;
+.blog-post {
+  background-color: var(--clr-neutral-200);
+  margin-top: var(--space-1);
+  box-shadow: var(--box-shadow);
 }
 
-.blog-column-right {
-  border-left: 1px dashed var(--clr-primary-400);
-  flex: 1;
-  order: 2;
-  min-width: 100%;
-}
-
-.blog-categories,
-.blog-tags {
-  padding: 0 0 3rem 1rem;
-}
-
-@media screen and (min-width: 768px) {
-  .blog-column-left,
-  .blog-column-right {
-    order: 0;
-    min-width: auto;
-  }
-
-  .news__wrapper {
-    display: flex;
-    margin-top: var(--space-4);
-  }
-
-  .card__wrapper {
-    width: 50%;
-  }
-
-  .card__background {
-    margin-bottom: var(--space-4);
-  }
-}
-
-/* ------------- blog-wrapper ------------- */
-
-.news__wrapper {
-  column-gap: var(--space-2);
-  margin-top: var(--space-2);
-}
-
-.img__padding {
-  padding: 0.5rem;
-  border-radius: var(--border-radius);
-}
-
-.card__wrapper {
-  box-shadow: var(--clr-shadow);
-  border-radius: var(--border-radius);
-}
-
-.card__left-column {
-  margin-bottom: var(--space-2);
-}
-
-.card__right-column {
-  position: relative;
-  aspect-ratio: auto 3 / 4;
-  width: 100%;
-  pad: var(--space-1);
-}
-
-.card__right-column img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-}
-
-.card__background {
-  background-color: var(--clr-primary-100);
+.post-title {
+  font-family: var(--ff-body);
+  font-size: var(--fs-600);
+  font-weight: 700;
   padding: var(--space-1);
-  margin-bottom: var(--space-2);
 }
 
-.card__title {
+.post-excerpt {
+  padding: 0 var(--space-1);
 }
 
-.card__footer {
+/* ---- specific page --*/
+
+.post-content {
+  padding: var(--space-1);
+  max-width: 950px;
 }
 
-.card__icon {
+.post-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: var(--border-radius);
 }
 
-.tag {
+/* ----- mediaqueries ----*/
+
+@media screen and (min-width: 1024px) {
+  .blog-post {
+    margin: var(--space-1);
+  }
+  .blog-posts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }

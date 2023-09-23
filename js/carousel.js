@@ -1,5 +1,8 @@
 // Author: Linda Moenstre - Digitaldesigner.no 2023
 
+import { updateCopyrightYear } from "./currentyear.js";
+import { fetchBlogPosts } from "./main.js";
+
 const carousel = document.querySelector(".carousel");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
@@ -7,33 +10,30 @@ const loader = document.getElementById("loader");
 let startIndex = 0;
 const postsPerPage = 1;
 
-async function fetchBlogPosts(start, perPage) {
-  try {
-    loader.style.display = "block"; // Show loader while fetching data
-    const response = await fetch(
-      `https://sweetheartembroidery.com/wp-json/wp/v2/posts?per_page=${perPage}&offset=${start}&_embed`
-    );
-    if (!response.ok) {
-      throw new Error("Failed to fetch blog posts");
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-    return [];
-  } finally {
-    loader.style.display = "none"; // Hide loader when data is fetched
-  }
-}
-
 function createCarouselItem(post) {
   const item = document.createElement("div");
   item.classList.add("carousel-item");
   item.innerHTML = `
-        <img src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${post.title.rendered}">
-        <h3>${post.title.rendered}</h3>
-    `;
+      <a href="blog.html?id=${post.id}">
+          <img src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${
+    post.title.rendered
+  }">
+          <div class="overlay">
+              <p class="read-more-button">${getFirstWords(
+                post.title.rendered
+              )}</p>
+          </div>
+      </a>
+  `;
   return item;
+}
+
+function getFirstWords(str) {
+  const words = str.split(" ");
+  if (words.length <= 3) {
+    return str;
+  }
+  return words.slice(0, 3).join(" ") + "...";
 }
 
 async function showPosts(start) {
@@ -58,16 +58,19 @@ async function initCarousel() {
 
   nextButton.addEventListener("click", async () => {
     await showPosts(startIndex + postsPerPage);
+    addClickEventListeners(); // Re-add click event listeners
   });
 
   prevButton.addEventListener("click", async () => {
     if (startIndex >= postsPerPage) {
       await showPosts(startIndex - postsPerPage);
     } else {
-      // Handle edge case when startIndex is less than postsPerPage
       await showPosts(0);
     }
+    addClickEventListeners();
   });
 }
 
 initCarousel();
+
+updateCopyrightYear();

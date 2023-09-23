@@ -1,12 +1,18 @@
-// Author: Linda Moenstre - Digitaldesigner.no 2023
+// @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
+
+import { updateCopyrightYear } from "./currentyear.js";
 
 const form = document.querySelector("#form");
+
 const name = document.querySelector("#name");
 const nameError = document.querySelector("#nameError");
+
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
+
 const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
+
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
 const messageSuccess = document.querySelector("#messageSuccess");
@@ -73,5 +79,4 @@ function messageSubmit(event) {
 
 form.addEventListener("submit", messageSubmit);
 
-const d = new Date();
-document.getElementById("currentYear").innerHTML = d.getFullYear();
+updateCopyrightYear();

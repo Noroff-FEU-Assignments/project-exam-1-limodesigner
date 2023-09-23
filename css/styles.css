@@ -4,7 +4,7 @@
 @import url("carousel.css");
 @import url("blog.css");
 @import url("forms.css");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Baskerville:wght@400;700&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Satisfy&display=swap");
 
 :root {
   --clr-light: #ffffff;
@@ -27,8 +27,8 @@
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
-  --ff-body: "Lato", sans-serif;
-  --ff-heading: "Libre Baskerville", Geogia, serif;
+  --ff-body: "Poppins", sans-serif;
+  --ff-heading: "Poppins", sans-serif;
   --ff-handwriting: "Satisfy", cursive;
   --fs-300: 14px; /* thin */
   --fs-400: 18px; /* regular/text */
@@ -46,6 +46,8 @@
   --space-3: 3rem;
   --space-4: 4rem;
   --space-5: 5rem;
+
+  --gap: 3rem;
 }
 
 *,
@@ -61,7 +63,6 @@
 }
 
 html {
-  color-scheme: light;
   scroll-behavior: smooth;
   /* background-color: var(--clr-light); */
   margin-left: auto;
@@ -75,6 +76,7 @@ body {
   line-height: 1.4;
   min-height: 100vh;
   min-height: 100dvh;
+  overflow-x: hidden;
 }
 
 main {
@@ -87,8 +89,14 @@ main {
 img,
 svg,
 aside,
-.read-more-button,
-li {
+li,
+h1,
+h2,
+h3,
+h4,
+li,
+p,
+.nav-toggle {
   display: block;
   max-width: 100%;
 }
@@ -110,7 +118,6 @@ h4,
 li,
 p {
   text-wrap: balance;
-  display: block;
 }
 
 h1 {
@@ -125,7 +132,6 @@ h2 {
 
 h3 {
   font-family: var(--ff-body);
-  font-size: var(--fs-600);
   font-weight: 600;
 }
 
@@ -137,10 +143,12 @@ p {
   padding: 1rem 0;
 }
 
+.align__center {
+  text-align: center;
+}
+
 a:link {
   cursor: pointer;
-  font-size: var(--fs-600);
-  font-weight: 600;
   text-decoration: none;
 }
 
@@ -150,57 +158,46 @@ a:focus {
 }
 
 a:visited {
-  /* color: var(--clr-neutral-700); */
+  color: var(--clr-light);
 }
 
 .active {
-  border-bottom: 2px dotted var(--clr-primary-800);
+  color: var(--clr-primary-400);
+  border-bottom: 2px dotted var(--clr-primary-400);
 }
 
-.read-more-button {
-  background-color: var(--clr-primary-400);
-  color: var(--clr-light);
-  font-size: var(--fs-600);
-  font-weight: 500;
-  text-transform: uppercase;
-  border: 0;
+.button {
+  background-color: var(--clr-dark);
+  padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius);
-  padding: 0.5rem 1rem;
-  text-align: center;
-  margin-top: 1rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
 }
 
-.read-more-button:hover {
-  background-color: var(--clr-primary-600);
-}
-
-::selection {
-  background-color: var(--clr-primary-200);
-}
-
-.skip-link {
+.sr-only {
   position: absolute;
-  left: -9999px;
+  left: -10000px;
   top: auto;
   width: 1px;
   height: 1px;
   overflow: hidden;
 }
 
-.skip-link:focus {
-  left: auto;
+::selection {
+  background-color: var(--clr-primary-200);
+}
+
+#skip a {
+  position: absolute;
+  left: -10000px;
   top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#skip a:focus {
+  position: static;
   width: auto;
   height: auto;
-  overflow: visible;
-  background-color: var(--clr-primary-200);
-  color: var(--clr-dark);
-  padding: 1rem 2rem;
-  text-align: center;
-  text-decoration: none;
-  z-index: 1000;
 }
 
 aside {
@@ -272,15 +269,6 @@ aside {
   flex-wrap: nowrap;
 }
 
-/* .grid {
-  display: grid;
-}
-
-
-.place-items {
-  place-items: center;
-} */
-
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -311,6 +299,8 @@ aside {
   display: none;
 }
 
+
+
 /* ---------- Media Queries -------------*/
 
 @media only screen and (min-width: 769px) {
@@ -321,6 +311,8 @@ aside {
   .center {
     padding: var(--space-2) 0;
   }
+
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -335,17 +327,5 @@ aside {
   .header__title {
     text-align: left;
     padding: var(--space-2);
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  .header__title {
-    padding: 4rem 0 0 12rem;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  html {
-    background-image: url(/img/sewsweet-backgr.gif);
   }
 }

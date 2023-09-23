@@ -1,7 +1,7 @@
 // @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
-
-import { showLoader, hideLoader } from "./components/loader.js";
-import { fetchBlogPosts } from "./api.js";
+import { showLoader, hideLoader } from "./loader.js";
+import { fetchBlogPosts } from "./main.js";
+import { updateCopyrightYear } from "./currentyear.js";
 
 async function displayBlogPosts() {
   try {
@@ -48,8 +48,8 @@ async function displayBlogPosts() {
 
       const readMoreButton = document.createElement("a");
       readMoreButton.classList.add("read-more-button");
-      readMoreButton.textContent = "Read >>>";
-      readMoreButton.href = `blog-post.html?id=${post.id}`;
+      readMoreButton.textContent = "Read more";
+      readMoreButton.href = `blog.html?id=${post.id}`;
 
       const readMoreParagraph = document.createElement("p");
       readMoreParagraph.appendChild(readMoreButton);
@@ -66,6 +66,4 @@ async function displayBlogPosts() {
 
 document.addEventListener("DOMContentLoaded", displayBlogPosts);
 
-const d = new Date();
-let year = d.getFullYear();
-document.getElementById("currentYear").innerHTML = year;
+updateCopyrightYear();

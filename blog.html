@@ -22,7 +22,7 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-    <script src="/js/blog/single-post.js" type="module"></script>
+    <script src="./js/blogpost.js" type="module"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,97 +33,83 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body>
+<body id="top">
     <noscript>You need to enable Javascript to run this site.</noscript>
-    <a href="#main" class="skip-link">Skip to main content</a>
+    <div id="skip"><a href="#content">Skip to Main Content</a></div>
 
-    <header class="grid gap place-items">
-        <div class="mobile">
-            <a href="index.html"><img src="img/sweetheart_logo-mobile.gif" alt="Click for homepage"></a>
-        </div>
-        <div class="desktop">
-            <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage" class="logo"></a>
-        </div>
 
-        <div id="mobile-menu" class="mobile-sub-menu">
-            <div class="tags__wrapper flex">
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">01</p>
-                            <h4 class="tags__wrapper-title">News</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">02</p>
-                            <h4 class="tags__wrapper-title">Accessories</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">03</p>
-                            <h4 class="tags__wrapper-title">By machine</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">04</p>
-                            <h4 class="tags__wrapper-title">By hand</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">05</p>
-                            <h4 class="tags__wrapper-title">Techniques</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">06</p>
-                            <h4 class="tags__wrapper-title">History</h4>
-                        </a>
-                    </div>
-                </div>
-
+    <header>
+        <div class="logo">
+            <div class="mobile">
+                <a href="index.html"><img src="img/sweetheart_logo-mobile.gif" alt="Click for homepage"></a>
             </div>
+            <div class="desktop">
+                <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage"></a>
+            </div>
+
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span></button>
+
+            <button class="search-toggle" aria-controls="primary-search" aria-expanded="false">
+                <span class="sr-only">Search</span></button>
+
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation navflex">
+                    <li class="nav-style active"><a href="index.html"><span aria-hidden="true">00</span>Home</a></li>
+                    <li><a href="bloglist.html" class="nav-style"><span aria-hidden="true">01</span>Blog</a></li>
+                    <li><a href="about.html" class="nav-style">
+                            <span aria-hidden="true">02</span>About</a></li>
+                    <li><a href="contact.html" class="nav-style">
+                            <span aria-hidden="true">03</span>Contact</a></li>
+                    <li><a href="#" class="nav-style desktop">
+                            <img src="img/search-icon.svg" alt=""></a></li>
+                </ul>
+            </nav>
         </div>
-
-        <nav class="nav__wrapper">
-            <div class="nav__logo"><a href="/index.html" class="nav__logo-style">S</a></div>
-            <ul class="nav__list">
-                </li>
-                <li class="nav__item"><a href="/blogs.html" class="nav__text">Blog</a></li>
-                <li class="nav__item"><a href="/about.html">About</a></li>
-                <li class="nav__item"><a href="/contact.html">Contact</a></li>
-            </ul>
-
-        </nav>
 
     </header>
-    <main>
-        <div>
-            <div class="loader" id="loader"></div>
-            <h1 id="post-title"></h1>
-            <div id="post-content" class="post-content"></div>
-        </div>
 
+    <main>
+        <div class="loader" id="loader"></div>
+        <h1 id="blog-header__title"></h1>
+        <div id="post-content" class="post-content"></div>
+
+        <section class="comments-section">
+            <h2 class="comments-section__title">Comments please!</h2>
+            <div class="comments-section__container">
+                <div class="comment">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+                <div class="comment-form">
+                    <form id="comments_form" method="post">
+                        <div class="comment-form__container">
+                            <h3 class="comment-form__title">Add a comment</h3>
+                            <div class="comment-form__field">
+                                <label for="author_name">Name</label>
+                                <input type="text" name="author_name" id="author_name" required />
+                                <span id="name_error" class="comment-form__error">Please enter a name.</span>
+                            </div>
+                            <div class="comment-form__field">
+                                <label for="author_email">E-mail</label>
+                                <input type="text" name="author_email" id="author_email" required />
+                                <span id="email_error" class="comment-form__error">Please enter a valid e-mail
+                                    address.</span>
+                            </div>
+                            <div class="comment-form__field">
+                                <label for="content">Comment</label>
+                                <textarea name="content" id="content" cols="15" rows="10" required></textarea>
+                                <span id="message_error" class="comment-form__error">Please enter a comment.</span>
+                            </div>
+                            <div class="comment-form__actions">
+                                <button id="comment_submit_button" class="comment-form__submit-button">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer__wrapper">

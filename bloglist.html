@@ -7,10 +7,10 @@
     <meta name="description"
         content="Sweetheart Embroidery Online - Learn more about embroidery, both on machine and by hand!" />
     <meta name="author" content="Linda Moenstre" />
-    <meta name="theme-color" content="#333333" />
+    <meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light">
 
-    <title>Sweetheart Embroidery | Home</title>
+    <title>Sweetheart Embroidery | Bloglist</title>
 
     <!-- Hotjar Tracking Code for SweeetheartEmbroidery -->
     <script>
@@ -23,12 +23,11 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-    <script src="./js/carousel.js" type="module"></script>
-    <script src="./js/navigation.js" defer></script>
+    <script src="./js/bloglist.js" type="module"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Baskerville:wght@400;700&family=Satisfy&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Satisfy&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -67,76 +66,29 @@
                 </ul>
             </nav>
         </div>
+
     </header>
 
     <main>
-        <section>
-            <h1 class="sr-only">Latest posts</h1>
-            <article class="carousel__section">
-                <div class="loader" id="loader"></div>
-                <div class="carousel__wrapper">
-                    <div class="carousel">
-                        <!-- Carousel items will be populated here -->
-                    </div>
-                    <div>
-                        <button class="prev-button">&#10094;</button>
-                        <button class="next-button">&#10095;</button>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <img src="img/sewsweet-horz-ruler-pink.png" class="center padding">
-
-        <section class="content__wrapper">
-            <div class="grid__wrapper">
-                <div class="grid__wrapper-columns">
-                    <img src="img/sweetheart-teammembers4.jpg" alt="Owner Linda is smiling and welcoming you!"
-                        class="img__style padding">
-                </div>
-                <div class="grid__wrapper-columns align__center">
-                    <h2 class="header__title">Welcome!</h2>
-                    <p>
-                        A warm welcome to Sweetheart Embroidery Online! Our team is dedicated to providing you with the
-                        most exquisite and creative stitch patterns for your crafting pleasure. We're thrilled that
-                        you've ...
-                    </p>
-                    <div class="padding"><a href="about.html" class="button">Learn more</a></div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <aside class="subscription__wrapper">
+        <div class="blog-header">
             <div>
-                <p class="subscription__title">Subscribe for a FREE downloadable stitch pattern!</p>
+                <h1 class="blog-header__title">Sew Sweet Blog</h1>
             </div>
-            <div id="messageSuccess"></div>
-            <form action="subscribe.php" method="POST" autocomplete="on" id="form">
-                <fieldset>
-                    <legend>
-                        <span class="hide">Your information:</span>
-                    </legend>
 
-                    <div class="contact-box">
-                        <label for="name" class="contact-box__label">Name *</label>
-                        <input type="text" class="contact-box__input" id="name" placeholder="Enter your name" required
-                            aria-labelledby="name-label">
-                        <div class="form-error" id="nameError">Please enter your name</div>
-                    </div>
+            <div class="blog-header__form">
+                <form action="">Filter</form>
+            </div>
+        </div>
 
-                    <div class="contact-box">
-                        <label for="email" class="contact-box__label">E-mail *</label>
-                        <input type="email" class="contact-box__input" id="email" placeholder="Enter your email"
-                            required aria-labelledby="email-label">
-                        <div class="form-error" id="emailError">Please enter a valid email</div>
-                    </div>
-                </fieldset>
-                <button type="submit" class="button" id="btnsubmit">Sign me up</button>
-            </form>
-        </aside>
+        <div class="loader" id="loader"></div>
+        <div class="blog-wrapper">
+            <div>
+                <div class="blog-posts-grid" id="blog-posts-all"></div>
+            </div>
+        </div>
+
     </main>
+
 
     <footer class="footer__wrapper">
         <div class="footer__item">
@@ -158,8 +110,6 @@
         <div>
             <p class="designer footer__item">Site by Digitaldesigner</p>
         </div>
-        <a href="#top" class="back-to-top"><span class="sr-only">Back to top</span><img src="img/arrow-up.svg"
-                alt="Back to top"></a>
     </footer>
     </div>
 </body>

@@ -22,7 +22,7 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-    <script src="./js/components/contact.js" defer></script>
+    <script src="./js/contact.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -129,7 +129,8 @@
                         <div class="contact-box">
                             <label for="name" class="contact-box__label">Name *</label>
                             <input type="text" class="contact-box__input" id="name">
-                            <div class="form-error" id="nameError">Your name should contain more than 5 characters</div>
+                            <div class="form-error" id="nameError">Your name should contain more than 5 characters
+                            </div>
                         </div>
 
                         <div class="contact-box">
@@ -153,6 +154,7 @@
                     <button class="button" id="btnsubmit">Submit</button>
                 </form>
             </div>
+
 
             <div class="grid__wrapper-columns hide">
                 <img src="img/sweetheart-hello.png"
