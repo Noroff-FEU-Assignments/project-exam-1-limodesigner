@@ -1,4 +1,4 @@
-// Author: Linda Moenstre - Digitaldesigner.no 2023
+// @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
 
 import { updateCopyrightYear } from "./currentyear.js";
 import { fetchBlogPosts } from "./main.js";
@@ -15,25 +15,11 @@ function createCarouselItem(post) {
   item.classList.add("carousel-item");
   item.innerHTML = `
       <a href="blog.html?id=${post.id}">
-          <img src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${
-    post.title.rendered
-  }">
-          <div class="overlay">
-              <p class="read-more-button">${getFirstWords(
-                post.title.rendered
-              )}</p>
-          </div>
+          <img src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${post.title.rendered}">
+          <p>${post.title.rendered}</p>
       </a>
   `;
   return item;
-}
-
-function getFirstWords(str) {
-  const words = str.split(" ");
-  if (words.length <= 3) {
-    return str;
-  }
-  return words.slice(0, 3).join(" ") + "...";
 }
 
 async function showPosts(start) {

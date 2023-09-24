@@ -1,4 +1,5 @@
-/* Author: Linda Moenstre - Digitaldesigner.no 2023 */
+/*  @author Linda Moenstre 2023 - <linda@digitaldesigner.no> */
+
 /* header, footer */
 
 header {
@@ -55,61 +56,6 @@ header {
   z-index: 800;
 }
 
-/*-----------------*/
-
-@media (max-width: 768px) {
-  .left {
-    display: none; /* Hide the left column on mobile */
-  }
-
-  .primary-navigation {
-    position: fixed;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: min(20vh, 4rem) 4rem;
-    inset: 0;
-    background-color: var(--clr-primary-800);
-    z-index: 900;
-    transform: translateX(100%);
-    transition: transform 350ms ease-out;
-  }
-
-  .primary-navigation[data-visible="true"] {
-    transform: translateX(0%);
-  }
-
-  .nav-toggle {
-    position: fixed;
-    background-image: url(/img/add-icon.svg);
-    background-repeat: no-repeat;
-    border: 0;
-    width: 44px;
-    height: 44px;
-    aspect-ratio: 1;
-    bottom: 2rem;
-    right: 3rem;
-    border-radius: 50%;
-    box-shadow: var(--box-shadow);
-    z-index: 910;
-  }
-
-  .nav-toggle[aria-expanded="true"] {
-    background-image: url(/img/close-icon.svg);
-  }
-
-  .logo-icon {
-    position: fixed;
-    background-image: url(/img/logo-icon.png);
-    background-repeat: no-repeat;
-    border: 0;
-    width: 44px;
-    height: 44px;
-    bottom: 2rem;
-    left: 3rem;
-    z-index: 900;
-  }
-}
-
 /* -------------- Footer --------------- */
 
 footer {
@@ -162,6 +108,57 @@ footer {
   .hide {
     display: none;
   }
+
+  .left {
+    display: none; /* Hide the left column on mobile */
+  }
+
+  .primary-navigation {
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: min(20vh, 4rem) 4rem;
+    inset: 0;
+    background-color: var(--clr-primary-800);
+    z-index: 900;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .nav-toggle {
+    position: fixed;
+    background-image: url(/img/add-icon.svg);
+    background-repeat: no-repeat;
+    border: 0;
+    width: 44px;
+    height: 44px;
+    aspect-ratio: 1;
+    bottom: 2rem;
+    right: 3rem;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    z-index: 910;
+  }
+
+  .nav-toggle[aria-expanded="true"] {
+    background-image: url(/img/close-icon.svg);
+  }
+
+  .logo-icon {
+    position: fixed;
+    background-image: url(/img/logo-icon.png);
+    background-repeat: no-repeat;
+    border: 0;
+    width: 44px;
+    height: 44px;
+    bottom: 2rem;
+    left: 3rem;
+    z-index: 900;
+  }
 }
 
 @media (min-width: 769px) {
@@ -189,6 +186,11 @@ footer {
     display: none;
   }
 
+  .back-to-top {
+    bottom: 2.5rem;
+    left: 85%;
+  }
+
   .navflex {
     gap: var(--gap);
   }
@@ -212,5 +214,4 @@ footer {
   footer {
     padding: 0 2rem;
   }
-
 }
