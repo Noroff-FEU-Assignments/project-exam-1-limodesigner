@@ -10,7 +10,7 @@ header {
 
 .desktop {
   max-width: 950px;
-  margin: 2rem 1rem 0;
+  margin: 2rem 1rem;
 }
 
 .logo {
@@ -213,7 +213,5 @@ footer {
   footer {
     padding: 0 2rem;
   }
-}
 
-@media only screen and (min-width: 1400px) {
 }

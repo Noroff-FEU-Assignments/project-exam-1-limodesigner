@@ -13,7 +13,7 @@
 .carousel__wrapper {
   width: 100%;
   overflow: hidden;
-  padding: 0 var(--space-2);
+  padding: 0 var(--space-2) var(--space-2);
 }
 
 .carousel {
@@ -47,7 +47,7 @@
 .carousel-item h3 {
   background-color: var(--clr-dark);
   font-size: var(--fs-400);
-  padding: 0.25rem .75rem;
+  padding: 0.25rem 0.75rem;
   box-shadow: var(--box-shadow);
 }
 
@@ -80,8 +80,8 @@
 }
 
 @media (min-width: 769px) {
-  .carousel-wrapper {
-    padding: 0 var(--space-3);
+  .carousel__wrapper {
+    padding: var(--space-2) var(--space-3);
   }
 
   .carousel-item h3 {

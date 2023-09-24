@@ -147,6 +147,10 @@ p {
   text-align: center;
 }
 
+a {
+  color: var(--clr-primary-800);
+}
+
 a:link {
   cursor: pointer;
   text-decoration: none;
@@ -158,7 +162,7 @@ a:focus {
 }
 
 a:visited {
-  color: var(--clr-light);
+  color: var(--clr-primary-800);
 }
 
 .active {
@@ -166,10 +170,104 @@ a:visited {
   border-bottom: 2px dotted var(--clr-primary-400);
 }
 
+/* Buttons inspiation from Ian Lunn @ https://github.com/IanLunn/Hover#css */
 .button {
   background-color: var(--clr-dark);
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem var(--space-1);
   border-radius: var(--border-radius);
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-primary-600);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.button:hover,
+.button:focus,
+.button:visited,
+.button:active {
+  color: var(--clr-light);
+}
+.button:hover:before,
+.button:focus:before,
+.button:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.read-more-button {
+  background-color: var(--clr-neutral-200);
+  border: 1px solid var(--clr-primary-600);
+  padding: 0.5rem var(--space-1);
+  border-radius: var(--border-radius);
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  margin-left: 1rem;
+}
+.read-more-button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--clr-primary-600);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.read-more-button:hover,
+.read-more-button:focus,
+.read-more-button:active {
+  color: var(--clr-light);
+}
+
+.read-more-button:visited {
+  color: var(--clr-primary-800);
+}
+
+.read-more-button:hover:before,
+.read-more-button:focus:before,
+.read-more-button:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 .sr-only {
@@ -212,7 +310,7 @@ aside {
 
 .welcome__title {
   font-size: var(--fs-800);
-  padding-top: 2rem;
+  padding-top: var(--space-2);
 }
 
 .cursive {
@@ -257,7 +355,7 @@ aside {
 }
 
 .img__style {
-  max-width: 400px;
+  max-width: 275px;
   border-radius: 50%;
 }
 
@@ -304,7 +402,38 @@ aside {
   display: none;
 }
 
+/*              -*/
+.blog-card-wrapper {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-1);
+  padding: var(--space-1);
 
+  margin: auto;
+}
+.blog-card {
+  background-color: var(--clr-primary-200);
+  display: grid;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: var(--space-1);
+}
+
+.blog-card img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  align-self: end;
+}
+.blog-card-content {
+  padding: 1.5rem;
+}
+
+.reduce {
+  padding: 0;
+}
 
 /* ---------- Media Queries -------------*/
 
@@ -317,7 +446,9 @@ aside {
     padding: var(--space-2) 0;
   }
 
-
+  .img__style {
+    max-width: 375px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -332,5 +463,10 @@ aside {
   .header__title {
     text-align: left;
     padding: var(--space-2);
+  }
+
+  .blog-card-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2);
   }
 }

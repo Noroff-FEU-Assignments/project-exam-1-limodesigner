@@ -51,9 +51,9 @@
             <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                 <span class="sr-only">Menu</span></button>
 
-            <div class="logo-icon"><a href="index.html"><span class="hide"
-                        aria-labelledby="Click for homepage">Home</span></a>
-            </div>
+            <a href="index.html" class="logo-icon">
+                <span class="hide" aria-labelledby="Click for homepage">Home</span></a>
+
 
             <nav>
                 <ul id="primary-navigation" data-visible="false" class="primary-navigation navflex">
@@ -75,7 +75,6 @@
                 <div class="loader" id="loader"></div>
                 <div class="carousel__wrapper">
                     <div class="carousel">
-                        <!-- Carousel items will be populated here -->
                     </div>
                     <div>
                         <button class="prev-button">&#10094;</button>
@@ -85,20 +84,13 @@
             </article>
         </section>
 
-        <section class="padding">
-            <div>
-                <a href="">
 
-                </a>
-            </div>
-            <div>
-                <a href="">
+        <div class="blog-card-wrapper">
+            <div id="blogCard332" class="blog-card"></div>
+            <div id="blogCard355" class="blog-card"></div>
+        </div>
 
-                </a>
-            </div>
-        </section>
 
-        <img src="img/sewsweet-horz-ruler-pink.png" class="center padding">
 
         <section class="content__wrapper">
             <div class="grid__wrapper">
@@ -118,35 +110,11 @@
             </div>
         </section>
 
-        <aside class="subscription__wrapper">
-            <div>
-                <p class="subscription__title">Subscribe for a FREE downloadable stitch pattern!</p>
-            </div>
-            <div id="messageSuccess"></div>
-            <form action="subscribe.php" method="POST" autocomplete="on" id="form">
-                <fieldset>
-                    <legend>
-                        <span class="hide">Your information:</span>
-                    </legend>
+        <img src="img/sewsweet_horizontal-darkgrey.png" class="center padding">
 
-                    <div class="contact-box">
-                        <label for="name" class="contact-box__label">Name *</label>
-                        <input type="text" class="contact-box__input" id="name" placeholder="Enter your name" required
-                            aria-labelledby="name-label">
-                        <div class="form-error" id="nameError">Please enter your name</div>
-                    </div>
-
-                    <div class="contact-box">
-                        <label for="email" class="contact-box__label">E-mail *</label>
-                        <input type="email" class="contact-box__input" id="email" placeholder="Enter your email"
-                            required aria-labelledby="email-label">
-                        <div class="form-error" id="emailError">Please enter a valid email</div>
-                    </div>
-                </fieldset>
-                <button type="submit" class="button" id="btnsubmit">Sign me up</button>
-            </form>
-        </aside>
     </main>
+
+
 
     <footer class="footer__wrapper">
         <div class="footer__item">
