@@ -63,6 +63,9 @@ async function displayBlogCard(postId, containerId) {
       const featuredMedia = post._embedded["wp:featuredmedia"][0];
       if (featuredMedia && featuredMedia.source_url) {
         container.innerHTML = `
+        <div class="blog-card-image">
+        <img src="${featuredMedia.source_url}" alt="${post.title.rendered}">
+    </div>
                   <div class="blog-card-content">
                       <h2>${post.title.rendered}</h2>
                       <p class="reduce">${new Date(
@@ -73,11 +76,7 @@ async function displayBlogCard(postId, containerId) {
                         post.id
                       }">Read >>></a>
                   </div>
-                  <div class="blog-card-image">
-                      <img src="${featuredMedia.source_url}" alt="${
-          post.title.rendered
-        }">
-                  </div>
+                 
               `;
       }
     }

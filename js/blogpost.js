@@ -3,39 +3,41 @@
 import { showLoader, hideLoader } from "./loader.js";
 import { updateCopyrightYear } from "./currentyear.js";
 
-const blogContainer = document.querySelector(".post-content");
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
+document.addEventListener("DOMContentLoaded", function () {
+  const loader = document.getElementById("loader");
+  const postTitle = document.getElementById("blog-header__title");
+  const postDateAuthor = document.querySelector(".post-date");
+  const postMedia = document.getElementById("post-media");
+  const postText = document.getElementById("post-text");
 
-const postUrl = "https://sweetheartembroidery.com/wp-json/wp/v2/posts";
-const specificPostUrl = postUrl + `/${id}?_embed`;
+  const queryString = document.location.search;
+  const params = new URLSearchParams(queryString);
+  const id = params.get("id");
 
-showLoader();
+  const postUrl = `https://sweetheartembroidery.com/wp-json/wp/v2/posts/${id}?_embed`;
 
-async function getPost() {
-  try {
-    const response = await fetch(specificPostUrl);
-    const post = await response.json();
-    createHtml(post);
-  } catch (error) {
-    console.error({ error: "Could not load blogpost." });
-  } finally {
-    hideLoader();
-  }
-}
+  loader.style.display = "block";
 
-getPost();
+  showLoader();
 
-function createHtml(post) {
-  const postTitle = post.title.rendered;
-  const postContent = post.content.rendered;
+  fetch(postUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      postTitle.textContent = data.title.rendered;
+      postDateAuthor.textContent = `Published on ${new Date(
+        data.date
+      ).toLocaleDateString()}`;
+      postMedia.innerHTML = `<img src="${data._embedded["wp:featuredmedia"][0].source_url}" alt="Featured Image">`;
+      postText.innerHTML = data.content.rendered;
 
-  document.getElementById("blog-header__title").textContent = postTitle;
-  blogContainer.innerHTML = postContent;
+      loader.style.display = "none";
+      hideLoader();
+    })
+    .catch((error) => {
+      console.error("Error fetching blogpost:", error);
 
-  const changeTitle = document.querySelector(".newtitle").innerText;
-  document.title = `${postTitle}`;
-}
+      hideLoader();
+    });
+});
 
 updateCopyrightYear();

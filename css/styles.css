@@ -148,7 +148,8 @@ p {
 }
 
 a {
-  color: var(--clr-primary-800);
+  color: var(--clr-light);
+  font-size: var(--fs-500);
 }
 
 a:link {
@@ -162,12 +163,12 @@ a:focus {
 }
 
 a:visited {
-  color: var(--clr-primary-800);
+  color: var(--clr-light);
 }
 
 .active {
-  color: var(--clr-primary-400);
-  border-bottom: 2px dotted var(--clr-primary-400);
+  color: var(--clr-primary-100);
+  border-bottom: 2px dotted var(--clr-primary-200);
 }
 
 /* Buttons inspiation from Ian Lunn @ https://github.com/IanLunn/Hover#css */
@@ -409,7 +410,6 @@ aside {
   grid-template-columns: 1fr;
   gap: var(--space-1);
   padding: var(--space-1);
-
   margin: auto;
 }
 .blog-card {
@@ -438,6 +438,15 @@ aside {
 /* ---------- Media Queries -------------*/
 
 @media only screen and (min-width: 769px) {
+  a:visited {
+    color: var(--clr-dark);
+  }
+
+  .active {
+    color: var(--clr-dark);
+    border-bottom: 2px dotted var(--clr-primary-600);
+  }
+
   .content__wrapper {
     margin: var(--space-4);
   }
