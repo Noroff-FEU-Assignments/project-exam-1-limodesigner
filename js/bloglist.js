@@ -47,7 +47,7 @@ async function displayBlogPosts() {
       descriptionElement.textContent = truncatedExcerpt + "...";
 
       const readMoreButton = document.createElement("a");
-      readMoreButton.classList.add("read-more-button");
+      readMoreButton.classList.add("blog-button");
       readMoreButton.textContent = "Read more";
       readMoreButton.href = `blog.html?id=${post.id}`;
 

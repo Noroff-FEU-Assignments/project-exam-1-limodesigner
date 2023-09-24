@@ -54,7 +54,7 @@ async function displayBlogCard(postId, containerId) {
               <h2>${post.title.rendered}</h2>
               <p>${new Date(post.date).toLocaleDateString()}</p>
               <p>${post.excerpt.rendered}</p>
-              <a class="read-more-button" href="blog.html?id=${
+              <a class="blog-button" href="blog.html?id=${
                 post.id
               }">Read more</a>
           </div>
@@ -72,9 +72,9 @@ async function displayBlogCard(postId, containerId) {
                         post.date
                       ).toLocaleDateString()}</p>
                       <p class="no__padding">${post.excerpt.rendered}</p>
-                      <a class="read-more-button" href="blog.html?id=${
+                      <a class="blog-button" href="blog.html?id=${
                         post.id
-                      }">Read >>></a>
+                      }">Read </a>
                   </div>
                  
               `;
