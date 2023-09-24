@@ -50,10 +50,9 @@ header {
   position: fixed;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
   border-radius: 50%;
   bottom: 2rem;
+  left: 45%;
   z-index: 800;
 }
 
