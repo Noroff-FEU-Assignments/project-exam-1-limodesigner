@@ -4,11 +4,11 @@ import { showLoader, hideLoader } from "./loader.js";
 import { updateCopyrightYear } from "./currentyear.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const loader = document.getElementById("loader");
-  const postTitle = document.getElementById("blog-header__title");
+  const loader = document.querySelector(".loader");
+  const postTitle = document.querySelector("#blog-header__title");
   const postDateAuthor = document.querySelector(".post-date");
-  const postMedia = document.getElementById("post-media");
-  const postText = document.getElementById("post-text");
+  const postMedia = document.querySelector(".post-media");
+  const postText = document.querySelector(".post-text");
 
   const queryString = document.location.search;
   const params = new URLSearchParams(queryString);
@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const postUrl = `https://sweetheartembroidery.com/wp-json/wp/v2/posts/${id}?_embed`;
 
-  loader.style.display = "block";
-
+  // Show the loader before making the fetch request
   showLoader();
 
   fetch(postUrl)
@@ -30,12 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
       postMedia.innerHTML = `<img src="${data._embedded["wp:featuredmedia"][0].source_url}" alt="Featured Image">`;
       postText.innerHTML = data.content.rendered;
 
-      loader.style.display = "none";
+      // Hide the loader after data is fetched and displayed
       hideLoader();
     })
     .catch((error) => {
       console.error("Error fetching blogpost:", error);
 
+      // Hide the loader in case of an error
       hideLoader();
     });
 });
