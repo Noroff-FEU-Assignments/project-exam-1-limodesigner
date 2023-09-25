@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const postUrl = `https://sweetheartembroidery.com/wp-json/wp/v2/posts/${id}?_embed`;
 
-  // Show the loader before making the fetch request
   showLoader();
 
   fetch(postUrl)
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
       postMedia.innerHTML = `<img src="${data._embedded["wp:featuredmedia"][0].source_url}" alt="Featured Image">`;
       postText.innerHTML = data.content.rendered;
 
-      // Hide the loader after data is fetched and displayed
       hideLoader();
     })
     .catch((error) => {
