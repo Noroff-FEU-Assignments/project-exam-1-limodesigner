@@ -126,6 +126,10 @@ footer {
     transform: translateX(0%);
   }
 
+  .nav-style {
+    color: var(--clr-light);
+  }
+
   .nav-style:hover,
   .nav-style:focus,
   .nav-style:active,
