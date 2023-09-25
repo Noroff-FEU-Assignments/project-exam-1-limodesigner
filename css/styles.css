@@ -151,7 +151,7 @@ p {
 }
 
 a {
-  color: var(--clr-light);
+  color: var(--clr-dark);
   font-size: var(--fs-500);
 }
 
@@ -277,10 +277,6 @@ a:visited {
 .testing {
   display: grid;
   margin: auto;
-}
-
-a.blog-button {
-  color: var(--clr-dark);
 }
 
 .blog-button {
