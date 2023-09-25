@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Sweetheart Embroidery Online - Learn more about embroidery, both on machine and by hand!" />
+        content="Sweetheart Embroidery Online - When you want to learn everything about machine and hand embroidery!" />
     <meta name="author" content="Linda Moenstre" />
-    <meta name="theme-color" content="#fff" />
+    <meta name="theme-color" content="#ffffff" />
 
     <title>Sweetheart Embroidery | <span class="newtitle"></span> </title>
 
@@ -23,7 +23,7 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
     <script src="./js/blogpost.js" type="module"></script>
-
+    <script src="./js/navigation.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -37,7 +37,6 @@
     <noscript>You need to enable Javascript to run this site.</noscript>
     <div id="skip"><a href="#content">Skip to Main Content</a></div>
 
-
     <header>
         <div class="logo">
             <div class="mobile">
@@ -50,23 +49,23 @@
             <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                 <span class="sr-only">Menu</span></button>
 
-            <button class="search-toggle" aria-controls="primary-search" aria-expanded="false">
-                <span class="sr-only">Search</span></button>
+            <a href="index.html" class="logo-icon">
+                <span class="hide" aria-labelledby="Click for homepage">Home</span></a>
 
             <nav>
                 <ul id="primary-navigation" data-visible="false" class="primary-navigation navflex">
-                    <li class="nav-style active"><a href="index.html"><span aria-hidden="true">00</span>Home</a></li>
-                    <li><a href="bloglist.html" class="nav-style"><span aria-hidden="true">01</span>Blog</a></li>
+                    <li>
+                        <a href="index.html" class="nav-style"><span aria-hidden="true">00</span>Home</a>
+                    </li>
+                    <li class="active"><a href="bloglist.html" class="nav-style"><span
+                                aria-hidden="true">01</span>Blog</a></li>
                     <li><a href="about.html" class="nav-style">
                             <span aria-hidden="true">02</span>About</a></li>
                     <li><a href="contact.html" class="nav-style">
                             <span aria-hidden="true">03</span>Contact</a></li>
-                    <li><a href="#" class="nav-style desktop">
-                            <img src="img/search-icon.svg" alt=""></a></li>
                 </ul>
             </nav>
         </div>
-
     </header>
 
     <main>
@@ -85,46 +84,9 @@
             </div>
         </div>
 
-        <img src="img/sewsweet-horz-ruler-pink.png" alt="Sew sweet horizontal ruler" class="padding center">
+        <img src="img/sewsweet_horizontal-darkgrey.png" class="center padding" alt="page divider for footer">
 
-        <section class="comments-section">
-            <h2 class="comments-section__title">Comments please!</h2>
-            <div class="comments-section__container">
-                <div class="comment">
-                    <!-- Comments will be dynamically added here -->
-                </div>
-                <div class="comment-form">
-                    <form id="comments_form" method="post">
-                        <div class="comment-form__container">
-                            <h3 class="comment-form__title">Add a comment</h3>
-                            <div class="comment-form__field">
-                                <label for="author_name">Name</label>
-                                <input type="text" name="author_name" id="author_name" required />
-                                <span id="name_error" class="comment-form__error">Please enter a name.</span>
-                            </div>
-                            <div class="comment-form__field">
-                                <label for="author_email">E-mail</label>
-                                <input type="text" name="author_email" id="author_email" required />
-                                <span id="email_error" class="comment-form__error">Please enter a valid e-mail
-                                    address.</span>
-                            </div>
-                            <div class="comment-form__field">
-                                <label for="content">Comment</label>
-                                <textarea name="content" id="content" cols="15" rows="10" required></textarea>
-                                <span id="message_error" class="comment-form__error">Please enter a comment.</span>
-                            </div>
-                            <div class="comment-form__actions">
-                                <button id="comment_submit_button" class="comment-form__submit-button">
-                                    Submit
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
     </main>
-
     <footer class="footer__wrapper">
         <div class="footer__item">
             <h3 class="copyright">Copyright &copy; <span id="currentYear"></span> Sweetheart Embroidery Online
@@ -145,6 +107,8 @@
         <div>
             <p class="designer footer__item">Site by Digitaldesigner</p>
         </div>
+        <a href="#top" class="back-to-top"><span class="hide">Back to top</span><img src="img/arrow-up.svg"
+                alt="Back to top"></a>
     </footer>
     </div>
 </body>

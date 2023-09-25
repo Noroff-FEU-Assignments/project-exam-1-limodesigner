@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Sweetheart Embroidery Online - If you want to contact us, or have any questions, we are eager to assist you!" />
+        content="Sweetheart Embroidery Online - If you want to contact us or have any questions, we are eager to assist you!" />
     <meta name="author" content="Linda Moenstre" />
-    <meta name="theme-color" content="#fff" />
+    <meta name="theme-color" content="#ffffff" />
 
     <title>Sweetheart Embroidery | Contact us</title>
 
@@ -23,6 +23,7 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
     <script src="./js/contact.js" type="module"></script>
+    <script src="./js/navigation.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -32,87 +33,38 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body>
+<body id="top">
     <noscript>You need to enable Javascript to run this site.</noscript>
-    <a href="#main" class="skip-link">Skip to main content</a>
+    <div id="skip"><a href="#content">Skip to Main Content</a></div>
 
-    <header class="grid gap place-items">
-        <div class="mobile">
-            <a href="index.html"><img src="img/sweetheart_logo-mobile.gif" alt="Click for homepage"></a>
-        </div>
-        <div class="desktop">
-            <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage" class="logo"></a>
-        </div>
-
-        <div id="mobile-menu" class="mobile-sub-menu">
-            <div class="tags__wrapper flex">
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">01</p>
-                            <h4 class="tags__wrapper-title">News</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">02</p>
-                            <h4 class="tags__wrapper-title">Accessories</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">03</p>
-                            <h4 class="tags__wrapper-title">By machine</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">04</p>
-                            <h4 class="tags__wrapper-title">By hand</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">05</p>
-                            <h4 class="tags__wrapper-title">Techniques</h4>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ruler">
-                    <div class="tags__wrapper-content">
-                        <a href="" class="grid place-items">
-                            <p class="tags__wrapper-order">06</p>
-                            <h4 class="tags__wrapper-title">History</h4>
-                        </a>
-                    </div>
-                </div>
-
+    <header>
+        <div class="logo">
+            <div class="mobile">
+                <a href="index.html"><img src="img/sweetheart_logo-mobile.gif" alt="Click for homepage"></a>
             </div>
-        </div>
+            <div class="desktop">
+                <a href="index.html"><img src="img/sweetheart_logo-desktop.gif" alt="Click for homepage"></a>
+            </div>
 
-        <nav class="nav__wrapper">
-            <div class="nav__logo"><a href="/index.html" class="nav__logo-style">S</a></div>
-            <ul class="nav__list">
-                </li>
-                <li class="nav__item"><a href="/blogs.html" class="nav__text">Blog</a></li>
-                <li class="nav__item"><a href="/about.html">About</a></li>
-                <li class="nav__item"><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span></button>
+
+            <a href="index.html" class="logo-icon">
+                <span class="hide" aria-labelledby="Click for homepage">Home</span></a>
+
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation navflex">
+                    <li>
+                        <a href="index.html" class="nav-style"><span aria-hidden="true">00</span>Home</a>
+                    </li>
+                    <li><a href="bloglist.html" class="nav-style"><span aria-hidden="true">01</span>Blog</a></li>
+                    <li><a href="about.html" class="nav-style">
+                            <span aria-hidden="true">02</span>About</a></li>
+                    <li class="active"><a href="contact.html" class="nav-style">
+                            <span aria-hidden="true">03</span>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -151,10 +103,9 @@
                             <div class="form-error" id="messageError">Message must be 25 or more characters</div>
                         </div>
                     </fieldset>
-                    <button class="button" id="btnsubmit">Submit</button>
+                    <button class="read-more-button" id="btnsubmit">Submit</button>
                 </form>
             </div>
-
 
             <div class="grid__wrapper-columns hide">
                 <img src="img/sweetheart-hello.png"
@@ -162,10 +113,10 @@
             </div>
         </div>
 
-        <img src="img/sewsweet_horizontal-darkgrey.png" alt="" class="center">
+        <img src="img/sewsweet-horz-ruler-pink.png" alt="" class="center">
 
         <div>
-            <h2 class="header__title">Accessibility Statement</h2>
+            <h2 class="header__title cursive">Accessibility Statement</h2>
         </div>
         <div class="content__wrapper">
             <div class="grid__wrapper">
@@ -196,14 +147,17 @@
             </div>
         </div>
 
+        <img src="img/sewsweet_horizontal-darkgrey.png" class="center padding" alt="page divider for footer">
+
     </main>
+
+
 
     <footer class="footer__wrapper">
         <div class="footer__item">
             <h3 class="copyright">Copyright &copy; <span id="currentYear"></span> Sweetheart Embroidery Online
             </h3>
         </div>
-
         <div class="social flex footer__items">
             <a href="#"><img src="img/facebook-icon.svg" alt="Click for Sweetheart Embroidery on Facebook"
                     class="footer__item"></a>
@@ -214,10 +168,11 @@
             <a href="#"><img src="img/pinterest-icon.svg" alt="Click for Sweetheart Embroidery on Pinterest"
                     class="footer__item"></a>
         </div>
-
         <div>
             <p class="designer footer__item">Site by Digitaldesigner</p>
         </div>
+        <a href="#top" class="back-to-top"><span class="hide">Back to top</span><img src="img/arrow-up.svg"
+                alt="Back to top"></a>
     </footer>
     </div>
 </body>

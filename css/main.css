@@ -18,8 +18,6 @@ header {
   margin-bottom: var(--space-2);
 }
 
-/* ---------------- NAV ---------------- */
-
 .navflex {
   display: flex;
 }
@@ -56,10 +54,10 @@ header {
   z-index: 800;
 }
 
-/* -------------- Footer --------------- */
 
 footer {
   background-color: var(--clr-light);
+  margin-top: var(--space-2);
 }
 
 .footer__wrapper {

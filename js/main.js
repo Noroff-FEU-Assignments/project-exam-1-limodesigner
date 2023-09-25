@@ -72,7 +72,7 @@ async function displayBlogCard(postId, containerId) {
                         post.date
                       ).toLocaleDateString()}</p>
                       <p class="no__padding">${post.excerpt.rendered}</p>
-                      <a class="blog-button" href="blog.html?id=${
+                      <a class="blog-button flex" href="blog.html?id=${
                         post.id
                       }">Read </a>
                   </div>
