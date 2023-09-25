@@ -166,7 +166,7 @@ a:focus {
 }
 
 a:visited {
-  color: var(--clr-light);
+  color: var(--clr-dark);
 }
 
 .active {
