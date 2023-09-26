@@ -2,7 +2,7 @@
 
 .blog-header__title {
   font-family: var(--ff-handwriting);
-  font-size: var(--fs-600);
+  font-size: var(--fs-800);
 }
 
 .blog-header__form {
@@ -176,11 +176,7 @@
 
 @media screen and (min-width: 769px) {
   .blog-wrapper img {
-max-height: 630px;
-  }
-
-  .blog-header__title {
-    font-size: var(--fs-800);
+    max-height: 630px;
   }
 }
 
