@@ -16,7 +16,7 @@
 }
 
 .blog-posts-grid {
-  width: min(90%, 1200px);
+  width: min(98%, 1200px);
   display: grid;
   grid-auto-flow: row;
   gap: 1rem;
