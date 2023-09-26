@@ -4,7 +4,7 @@ import { showLoader, hideLoader } from "./loader.js";
 import { updateCopyrightYear } from "./currentyear.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const postTitle = document.querySelector("#blog-header__title");
+  const postTitle = document.querySelector(".blog-header__title");
   const postDate = document.querySelector(".post-date");
   const postMedia = document.querySelector(".post-media");
   const postText = document.querySelector(".post-text");
@@ -26,13 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
         data.date
       ).toLocaleDateString()}`;
 
-      // Check if 'wp:featuredmedia' exists in the data
       if (data._embedded && data._embedded["wp:featuredmedia"]) {
-        const imageInfo = data._embedded["wp:featuredmedia"][0];
-        if (imageInfo.source_url) {
+        const showImage = data._embedded["wp:featuredmedia"][0];
+        if (showImage.source_url) {
           const featuredImage = document.createElement("img");
           featuredImage.classList.add("post-image");
-          featuredImage.setAttribute("src", imageInfo.source_url);
+          featuredImage.setAttribute("src", showImage.source_url);
           featuredImage.setAttribute("alt", "Featured Image");
           postMedia.appendChild(featuredImage);
         }

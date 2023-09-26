@@ -274,12 +274,6 @@ a:visited {
   transform: scaleY(1);
 }
 
-.right-align {
-  text-align: right;
-  margin: 2rem;
-}
-
-/* Define a CSS class for the container */
 .blog-button-container {
   display: flex;
   justify-content: center;
