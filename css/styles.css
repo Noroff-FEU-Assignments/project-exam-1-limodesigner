@@ -365,10 +365,13 @@ aside {
   padding: 0 1.5rem;
 }
 
+/* ---- about.html scroller -----*/
+
 .flex__wrapper {
   width: 100%;
   display: flex;
   overflow-x: scroll;
+  margin-bottom: var(--space-3);
 }
 
 .flex__wrapper-item {
