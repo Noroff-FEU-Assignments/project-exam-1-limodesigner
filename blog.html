@@ -9,7 +9,7 @@
     <meta name="author" content="Linda Moenstre" />
     <meta name="theme-color" content="#ffffff" />
 
-    <title>Sweetheart Embroidery | <span class="newtitle"></span> </title>
+    <title></title>
 
     <!-- Hotjar Tracking Code for SweeetheartEmbroidery -->
     <script>
@@ -35,7 +35,11 @@
 
 <body id="top">
     <noscript>You need to enable Javascript to run this site.</noscript>
-    <div id="skip"><a href="#content">Skip to Main Content</a></div>
+    <a href="#content" class="skip">Skip to main content</a>
+
+    <div class="image-modal">
+        <div class="image-modal__body"></div>
+    </div>
 
     <header>
         <div class="logo">
@@ -68,19 +72,27 @@
         </div>
     </header>
 
-    <main>
-        <div class="loader" id="loader"></div>
+    <main id="content">
         <div class="blog-wrapper">
-            <div class="blog-content left">
-                <h1 id="blog-header__title"></h1>
-                <p class="post-date"></p>
-                <div class="post-media" id="post-media"></div>
-                <p class="post-text" id="post-text"></p>
-                <p class="post-category" id="post-category"></p>
-                <p class="post-tags" id="post-tags"></p>
+            <div class="blog-container">
+                <div class="loader" id="loader"></div>
+                <article class="blog-wrapper">
+                    <div class="blog-content">
+                        <h1 id="blog-header__title"></h1>
+                        <p class="post-date" id="post-date"></p>
+                        <div class="post-media" id="post-media"></div>
+                        <p class="post-text" id="post-text"></p>
+                        <p class="post-category" id="post-category"></p>
+                        <p class="post-tags" id="post-tags"></p>
+                    </div>
+                </article>
             </div>
-            <div class="blog-content right">
 
+            <h2 class="blog-header__title flex padding background">Prepare for christmas</h2>
+            <div class="blog-container-cards">              
+                <article class="blog-card" id="blogCard340"></article>
+                <article class="blog-card" id="blogCard350"></article>
+                <article class="blog-card" id="blogCard358"></article>
             </div>
         </div>
 

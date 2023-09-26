@@ -274,9 +274,17 @@ a:visited {
   transform: scaleY(1);
 }
 
-.testing {
-  display: grid;
-  margin: auto;
+.right-align {
+  text-align: right;
+  margin: 2rem;
+}
+
+/* Define a CSS class for the container */
+.blog-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--space-2);
 }
 
 .blog-button {
@@ -291,7 +299,7 @@ a:visited {
 .blog-button:visited {
   background-image: url(/img/scissor-icon.svg);
   background-repeat: no-repeat;
-  background-position: 15% 55%;
+  background-position: 10% 55%;
   color: var(--clr-dark);
   align-items: center;
   color: var(--clr-primary-800);
@@ -312,7 +320,7 @@ a:visited {
   background-color: var(--clr-primary-200);
 }
 
-#skip a {
+.skip {
   position: absolute;
   left: -10000px;
   top: auto;
@@ -321,7 +329,7 @@ a:visited {
   overflow: hidden;
 }
 
-#skip a:focus {
+.skip:focus {
   position: static;
   width: auto;
   height: auto;
@@ -329,12 +337,6 @@ a:visited {
 
 aside {
   width: 100%;
-}
-
-.header__title {
-  font-size: var(--fs-800);
-  text-align: center;
-  padding-top: var(--space-2);
 }
 
 .welcome__title {
@@ -472,11 +474,6 @@ aside {
 
   .order {
     order: 2;
-  }
-
-  .header__title {
-    text-align: left;
-    padding: var(--space-2);
   }
 
   .blog-card-wrapper {

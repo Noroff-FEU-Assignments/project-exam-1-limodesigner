@@ -36,7 +36,7 @@
 
 <body id="top">
     <noscript>You need to enable Javascript to run this site.</noscript>
-    <div id="skip"><a href="#content">Skip to Main Content</a></div>
+    <a href="#content" class="skip">Skip to main content</a>
 
     <header>
         <div class="logo">
@@ -69,20 +69,14 @@
         </div>
     </header>
 
-    <main>
-        <div class="blog-header">
-            <div>
-                <h1 class="blog-header__title">Sew Sweet Blog</h1>
-            </div>
-
-            <!-- <div class="blog-header__form">
-                <form action="">Filter</form>
-            </div> -->
-        </div>
+    <main id="content">
+        <h1 class="blog-header__title flex padding">Sew Sweet Blog</h1>
 
         <div class="loader" id="loader"></div>
         <div class="blog-wrapper">
             <div class="blog-posts-grid" id="blog-posts-all">
+                <!-- Read more buttons will be dynamically generated here -->
+                <!-- Each "blog-button" will be placed in its own container -->
             </div>
         </div>
         <div class="flex padding">
@@ -92,6 +86,7 @@
         <img src="img/sewsweet_horizontal-darkgrey.png" class="center padding" alt="page divider for footer">
 
     </main>
+
     <footer class="footer__wrapper">
         <div class="footer__item">
             <h3 class="copyright">Copyright &copy; <span id="currentYear"></span> Sweetheart Embroidery Online
