@@ -184,6 +184,8 @@ article.blog-wrapper {
   z-index: 499; 
 }
 
+
+
 .background {
   background-color: var(--clr-primary-200);
   padding: var(--space-1);

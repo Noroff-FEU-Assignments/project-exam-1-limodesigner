@@ -3,50 +3,66 @@
 import { showLoader, hideLoader } from "./loader.js";
 import { updateCopyrightYear } from "./currentyear.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const postTitle = document.querySelector(".blog-header__title");
-  const postDate = document.querySelector(".post-date");
-  const postMedia = document.querySelector(".post-media");
-  const postText = document.querySelector(".post-text");
-
+document.addEventListener("DOMContentLoaded", async function () {
   const queryString = document.location.search;
   const params = new URLSearchParams(queryString);
   const id = params.get("id");
-
+  const blogContent = document.querySelector(".blog-content");
   const postUrl = `https://sweetheartembroidery.com/wp-json/wp/v2/posts/${id}?_embed`;
 
   showLoader();
 
-  fetch(postUrl)
-    .then((response) => response.json())
-    .then((data) => {
-      document.title = "Sweetheart Embroidery | " + data.title.rendered;
-      postTitle.textContent = data.title.rendered;
-      postDate.textContent = `Published on ${new Date(
-        data.date
-      ).toLocaleDateString()}`;
+  try {
+    const response = await fetch(postUrl);
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch blog post: ${response.status} - ${response.statusText}`
+      );
+    }
+    const data = await response.json();
 
-      if (data._embedded && data._embedded["wp:featuredmedia"]) {
-        const showImage = data._embedded["wp:featuredmedia"][0];
-        if (showImage.source_url) {
-          const featuredImage = document.createElement("img");
-          featuredImage.classList.add("post-image");
-          featuredImage.setAttribute("src", showImage.source_url);
-          featuredImage.setAttribute("alt", "Featured Image");
-          postMedia.appendChild(featuredImage);
-        }
+    // Create and append the title
+    const titleElement = document.createElement("h2");
+    titleElement.classList.add("blog-header__title");
+    titleElement.textContent = data.title.rendered;
+    blogContent.appendChild(titleElement);
+
+    // Create and append the publication date
+    const dateElement = document.createElement("p");
+    dateElement.textContent = `Published on ${new Date(
+      data.date
+    ).toLocaleDateString()}`;
+    blogContent.appendChild(dateElement);
+
+    // Check if featured media exists and add the image
+    if (data._embedded && data._embedded["wp:featuredmedia"]) {
+      const showImage = data._embedded["wp:featuredmedia"][0];
+      if (showImage.source_url) {
+        const featuredImage = document.createElement("img");
+        featuredImage.classList.add("post-image");
+        featuredImage.setAttribute("src", showImage.source_url);
+        featuredImage.setAttribute("alt", "Featured Image");
+        blogContent.appendChild(featuredImage);
       }
+    }
 
-      postText.innerHTML = data.content.rendered;
+    // Set document title
+    document.title = `Sweetheart Embroidery | ${data.title.rendered}`;
 
-      hideLoader();
-    })
-    .catch((error) => {
-      console.error("Error fetching blogpost:", error);
+    // Create and append the rest of the blog content
+    const contentRendered = `
+      <div class="blog-images">${data.content.rendered}</div>
+    `;
 
-      hideLoader();
-    });
+    blogContent.innerHTML += contentRendered;
 
+    hideLoader();
+  } catch (error) {
+    console.error("Error fetching blog post", error);
+    hideLoader();
+  }
+
+  // Extra posts for interest
   async function fetchBlogPostById(postId) {
     try {
       const response = await fetch(
@@ -109,35 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
       container.appendChild(cardDiv);
     }
   }
-
-  function showImageModal(image) {
-    const modal = document.querySelector(".image-modal");
-    modal.classList.add("show");
-
-    const modalBackdrop = document.createElement("div");
-    modalBackdrop.classList.add("modal-backdrop");
-    modal.appendChild(modalBackdrop);
-
-    const modalBody = document.querySelector(".image-modal__page");
-    const modalImage = document.createElement("img");
-    modalImage.src = image.src;
-    modalBody.append(modalImage);
-
-    modalBackdrop.addEventListener("click", () => {
-      modalBody.innerHTML = "";
-      modal.classList.remove("show");
-    });
-  }
-
-  // I want to close the modal by clicking outside the image
-  document.addEventListener("click", (event) => {
-    const modal = document.querySelector(".image-modal");
-    if (event.target === modal) {
-      const modalBody = document.querySelector(".image-modal__page");
-      modalBody.innerHTML = "";
-      modal.classList.remove("show");
-    }
-  });
 
   displayBlogCard(340, "blogCard340");
   displayBlogCard(350, "blogCard350");
