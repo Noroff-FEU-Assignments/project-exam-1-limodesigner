@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const postUrl = `https://sweetheartembroidery.com/wp-json/wp/v2/posts/${id}?_embed`;
 
+  
+
   displayBlogCard(340, "blogCard340");
   displayBlogCard(350, "blogCard350");
   displayBlogCard(358, "blogCard358");
