@@ -43,6 +43,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         featuredImage.setAttribute("src", showImage.source_url);
         featuredImage.setAttribute("alt", "Featured Image");
         blogContent.appendChild(featuredImage);
+
+        // Add a click event listener to open the modal
+        featuredImage.addEventListener("click", () => {
+          openModal(showImage.source_url);
+        });
       }
     }
 
@@ -86,13 +91,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     if (post) {
       const container = document.getElementById(containerId);
 
-      const figures = document.querySelectorAll("figure");
-      figures.forEach((figure) => {
-        figure.addEventListener("click", (event) => {
-          showImageModal(figure.querySelector("img"));
-        });
-      });
-
       const cardDiv = document.createElement("div");
       cardDiv.classList.add("blog-card-background");
 
@@ -132,3 +130,26 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   updateCopyrightYear();
 });
+
+// Modal Functionality
+function openModal(imageSrc) {
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
+  modal.innerHTML = `
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img src="${imageSrc}" alt="Featured Image">
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  const closeModalButton = modal.querySelector(".close-modal");
+  closeModalButton.addEventListener("click", () => {
+    closeModal(modal);
+  });
+}
+
+function closeModal(modal) {
+  modal.remove();
+}
