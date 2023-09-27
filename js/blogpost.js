@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modalBackdrop.classList.add("modal-backdrop");
     modal.appendChild(modalBackdrop);
 
-    const modalBody = document.querySelector(".image-modal__body");
+    const modalBody = document.querySelector(".image-modal__page");
     const modalImage = document.createElement("img");
     modalImage.src = image.src;
     modalBody.append(modalImage);
@@ -127,18 +127,13 @@ document.addEventListener("DOMContentLoaded", function () {
       modalBody.innerHTML = "";
       modal.classList.remove("show");
     });
-
-    modal.addEventListener("click", (event) => {
-      // Prevent clicks inside the modal from closing it
-      event.stopPropagation();
-    });
   }
 
-  // Close the modal when clicking anywhere on the document
+  // I want to close the modal by clicking outside the image
   document.addEventListener("click", (event) => {
     const modal = document.querySelector(".image-modal");
     if (event.target === modal) {
-      const modalBody = document.querySelector(".image-modal__body");
+      const modalBody = document.querySelector(".image-modal__page");
       modalBody.innerHTML = "";
       modal.classList.remove("show");
     }
