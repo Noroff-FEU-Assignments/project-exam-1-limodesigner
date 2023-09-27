@@ -156,7 +156,7 @@ article.blog-wrapper {
   animation: in 0.3s ease-out;
 }
 
-.image-modal.show {
+.image-modal {
   display: flex;
 }
 
@@ -172,16 +172,6 @@ article.blog-wrapper {
   align-items: center;
   background-color: var(--clr-light);
   border-radius: var(--border-radius);
-}
-
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  z-index: 499;
 }
 
 .background {
