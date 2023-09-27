@@ -142,36 +142,33 @@ article.blog-wrapper {
 }
 
 /* modal */
-.image-modal {
+.pop-up-img-container {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 500;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.75);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  animation: in 0.3s ease-out;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
 }
 
-.image-modal {
-  display: flex;
+.pop-up-img-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1000px;
+  object-fit: cover;
 }
 
-.image-modal__page {
-  position: relative;
-  inset: 0;
-  margin: auto;
-  padding: 3rem;
-  max-width: 600px;
-  max-height: 600px;
+.blog-post-container-specific {
+  max-width: 700px;
+  padding: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--clr-light);
-  border-radius: var(--border-radius);
+  flex-direction: column;
+  margin-bottom: 2rem;
+  gap: 2rem;
 }
 
 .background {

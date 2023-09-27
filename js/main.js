@@ -45,7 +45,7 @@ async function fetchBlogPostById(postId) {
   }
 }
 
-async function displayBlogCard(postId, containerId) {
+export async function displayBlogCard(postId, containerId) {
   const post = await fetchBlogPostById(postId);
   if (post) {
     const container = document.getElementById(containerId);
@@ -83,7 +83,6 @@ async function displayBlogCard(postId, containerId) {
   }
 }
 
-// Display specific blog posts in cards
 displayBlogCard(332, "blogCard332");
 displayBlogCard(355, "blogCard355");
 
