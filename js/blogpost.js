@@ -36,8 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      hideLoader();
-
       contentRendered.innerHTML = blogPostContent;
 
       const modalContainer = document.querySelector(".image-modal__page");
@@ -54,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
           modalContainer.style.display = "none";
         }
       };
+
+      hideLoader();
     })
     .catch((error) => {
       console.error("Error fetching blogpost", error);
@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
       hideLoader();
     });
 
-  // Extra posts for interest
   async function fetchBlogPostById(postId) {
     try {
       const response = await fetch(
@@ -124,6 +123,40 @@ document.addEventListener("DOMContentLoaded", function () {
       container.appendChild(cardDiv);
     }
   }
+
+  function showImageModal(image) {
+    const modal = document.querySelector(".image-modal");
+    modal.classList.add("show");
+
+    const modalBackdrop = document.createElement("div");
+    modalBackdrop.classList.add("modal-backdrop");
+    modal.appendChild(modalBackdrop);
+
+    const modalBody = document.querySelector(".image-modal__page");
+    const modalImage = document.createElement("img");
+    modalImage.src = image.src;
+    modalBody.append(modalImage);
+
+    modalBackdrop.addEventListener("click", () => {
+      modalBody.innerHTML = "";
+      modal.classList.remove("show");
+    });
+
+    modal.addEventListener("click", (event) => {
+      // Prevent clicks inside the modal from closing it
+      event.stopPropagation();
+    });
+  }
+
+  // Close the modal when clicking anywhere on the document
+  document.addEventListener("click", (event) => {
+    const modal = document.querySelector(".image-modal");
+    if (event.target === modal) {
+      const modalBody = document.querySelector(".image-modal__page");
+      modalBody.innerHTML = "";
+      modal.classList.remove("show");
+    }
+  });
 
   displayBlogCard(340, "blogCard340");
   displayBlogCard(350, "blogCard350");
