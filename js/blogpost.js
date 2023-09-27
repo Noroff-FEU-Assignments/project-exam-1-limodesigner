@@ -44,11 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => {
       console.error("Error fetching blogpost:", error);
 
-      // Hide the loader in case of an error
       hideLoader();
     });
 
-  // Function to fetch and display specific blog posts in cards
   async function fetchBlogPostById(postId) {
     try {
       const response = await fetch(
@@ -72,9 +70,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (post) {
       const container = document.getElementById(containerId);
 
-      // Create a new div element for the card
+      const figures = document.querySelectorAll("figure");
+      figures.forEach((figure) => {
+        figure.addEventListener("click", (event) => {
+          showImageModal(figure.querySelector("img"));
+        });
+      });
+
       const cardDiv = document.createElement("div");
-      cardDiv.classList.add(".blog-card-background");
+      cardDiv.classList.add("blog-card-background");
 
       // Check if featured media exists and add the image
       if (post._embedded && post._embedded["wp:featuredmedia"]) {
@@ -90,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      // Create a div for the card content
       const contentDiv = document.createElement("div");
       contentDiv.classList.add("blog-card-content");
 
@@ -102,15 +105,45 @@ document.addEventListener("DOMContentLoaded", function () {
       <a class="blog-button flex" href="blog.html?id=${post.id}">Read more</a>
     `;
 
-      // Append the content div to the card div
       cardDiv.appendChild(contentDiv);
-
-      // Append the card div to the specified container
       container.appendChild(cardDiv);
     }
   }
 
-  // Display specific blog posts in cards
+  function showImageModal(image) {
+    const modal = document.querySelector(".image-modal");
+    modal.classList.add("show");
+
+    const modalBackdrop = document.createElement("div");
+    modalBackdrop.classList.add("modal-backdrop");
+    modal.appendChild(modalBackdrop);
+
+    const modalBody = document.querySelector(".image-modal__body");
+    const modalImage = document.createElement("img");
+    modalImage.src = image.src;
+    modalBody.append(modalImage);
+
+    modalBackdrop.addEventListener("click", () => {
+      modalBody.innerHTML = "";
+      modal.classList.remove("show");
+    });
+
+    modal.addEventListener("click", (event) => {
+      // Prevent clicks inside the modal from closing it
+      event.stopPropagation();
+    });
+  }
+
+  // Close the modal when clicking anywhere on the document
+  document.addEventListener("click", (event) => {
+    const modal = document.querySelector(".image-modal");
+    if (event.target === modal) {
+      const modalBody = document.querySelector(".image-modal__body");
+      modalBody.innerHTML = "";
+      modal.classList.remove("show");
+    }
+  });
+
   displayBlogCard(340, "blogCard340");
   displayBlogCard(350, "blogCard350");
   displayBlogCard(358, "blogCard358");
