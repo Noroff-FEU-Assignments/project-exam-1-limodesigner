@@ -10,13 +10,8 @@ async function displayBlogPosts() {
     setTimeout(hideLoader, 2000);
 
     const blogPostsContainer = document.getElementById("blog-posts-all");
-    const loader = document.getElementById("loader");
-
-    loader.style.display = "block";
-
     const posts = await fetchBlogPosts();
 
-    loader.style.display = "none";
     blogPostsContainer.classList.remove("hidden");
 
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -65,7 +60,7 @@ async function displayBlogPosts() {
       blogPostsContainer.appendChild(postContainer);
     }
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error fetching blog posts:", error.message);
   }
 }
 
