@@ -6,25 +6,26 @@ import { updateCopyrightYear } from "./currentyear.js";
 
 const postsPerPage = 10;
 let currentPage = 1;
+let allPostsFetched = false; // Track whether all posts have been fetched
 
 async function displayBlogPosts() {
   try {
     showLoader();
 
     const blogPostsContainer = document.getElementById("blog-posts-all");
-    const posts = await fetchBlogPosts();
+    const posts = await fetchBlogPosts(currentPage, postsPerPage);
 
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     hideLoader();
 
     if (posts.length === 0) {
-      // Hide the "Load more" button if there are no more posts
       document.getElementById("load-more").style.display = "none";
+      allPostsFetched = true;
+      console.log(`No more posts to fetch. Current Page: ${currentPage}`);
       return;
     }
 
-    // Append the fetched posts to the list
     for (const post of posts) {
       const postContainer = document.createElement("li");
       postContainer.classList.add("blog-post");
@@ -72,14 +73,21 @@ async function displayBlogPosts() {
     console.error("Error fetching blog posts:", error.message);
   }
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   displayBlogPosts();
 
   const loadMoreButton = document.getElementById("load-more");
-  loadMoreButton.addEventListener("click", () => {
-    currentPage++;
-    displayBlogPosts();
+  loadMoreButton.addEventListener("click", async () => {
+    if (!allPostsFetched) {
+      currentPage++;
+      console.log(`Load more button clicked. Current Page: ${currentPage}`);
+      const posts = await displayBlogPosts();
+
+      if (posts === null) {
+        // Hide the "Load more" button if there are no more posts
+        loadMoreButton.style.display = "none";
+      }
+    }
   });
 });
 

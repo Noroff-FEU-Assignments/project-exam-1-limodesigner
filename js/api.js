@@ -1,14 +1,16 @@
+// @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
+
 import { showLoader, hideLoader } from "./loader.js";
 
 const baseUrl = "https://sweetheartembroidery.com";
 const apiEndpoint = "/wp-json/wp/v2/posts";
 const apiPosts = baseUrl + apiEndpoint;
 
-export async function fetchBlogPosts(start = 0, perPage = 10) {
+export async function fetchBlogPosts(page = 1, perPage = 10) {
   try {
     showLoader();
     const response = await fetch(
-      `${apiPosts}?per_page=${perPage}&offset=${start}&_embed`
+      `${apiPosts}?page=${page}&per_page=${perPage}&_embed`
     );
     if (!response.ok) {
       throw new Error(
