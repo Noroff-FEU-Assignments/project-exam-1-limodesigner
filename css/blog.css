@@ -193,6 +193,9 @@ article.blog-wrapper {
   padding: var(--space-1);
 }
 
+/* --- bloglist ---*/
+
+
 /* ----- mediaqueries ----*/
 
 @media screen and (min-width: 769px) {

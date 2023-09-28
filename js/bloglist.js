@@ -4,20 +4,29 @@ import { showLoader, hideLoader } from "./loader.js";
 import { fetchBlogPosts } from "./api.js";
 import { updateCopyrightYear } from "./currentyear.js";
 
+const postsPerPage = 10;
+let currentPage = 1;
+
 async function displayBlogPosts() {
   try {
     showLoader();
-    setTimeout(hideLoader, 2000);
 
     const blogPostsContainer = document.getElementById("blog-posts-all");
     const posts = await fetchBlogPosts();
 
-    // blogPostsContainer.classList.remove("hidden");
-
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+    hideLoader();
+
+    if (posts.length === 0) {
+      // Hide the "Load more" button if there are no more posts
+      document.getElementById("load-more").style.display = "none";
+      return;
+    }
+
+    // Append the fetched posts to the list
     for (const post of posts) {
-      const postContainer = document.createElement("div");
+      const postContainer = document.createElement("li");
       postContainer.classList.add("blog-post");
 
       const titleElement = document.createElement("h2");
@@ -64,6 +73,14 @@ async function displayBlogPosts() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", displayBlogPosts);
+document.addEventListener("DOMContentLoaded", () => {
+  displayBlogPosts();
+
+  const loadMoreButton = document.getElementById("load-more");
+  loadMoreButton.addEventListener("click", () => {
+    currentPage++;
+    displayBlogPosts();
+  });
+});
 
 updateCopyrightYear();
