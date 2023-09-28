@@ -81,6 +81,10 @@ async function fetchBlogPost() {
 
     const blogData = await response.json();
 
+    const title = blogData.title.rendered;
+
+    document.title = `Sweetheart embroidery | ${title}`;
+
     displayBlogPost(blogData);
   } catch (error) {
     console.error(`Error: ${error.message}`);
