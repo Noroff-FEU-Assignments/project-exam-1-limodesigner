@@ -1,7 +1,7 @@
 // @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
 
 import { showLoader, hideLoader } from "./loader.js";
-import { displayBlogCard } from "./main.js";
+import { displayBlogCard } from "./blogpostbyid.js";
 import { updateCopyrightYear } from "./currentyear.js";
 
 const queryString = document.location.search;

@@ -1,8 +1,4 @@
-// @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
-
 import { showLoader, hideLoader } from "./loader.js";
-import { displayBlogCard } from "./blogpostbyid.js";
-import { updateCopyrightYear } from "./currentyear.js";
 
 const baseUrl = "https://sweetheartembroidery.com";
 const apiEndpoint = "/wp-json/wp/v2/posts";
@@ -28,8 +24,3 @@ export async function fetchBlogPosts(start = 0, perPage = 10) {
     hideLoader();
   }
 }
-
-displayBlogCard(332, "blogCard332");
-displayBlogCard(355, "blogCard355");
-
-updateCopyrightYear();

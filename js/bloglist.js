@@ -1,7 +1,7 @@
 // @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
 
 import { showLoader, hideLoader } from "./loader.js";
-import { fetchBlogPosts } from "./main.js";
+import { fetchBlogPosts } from "./api.js";
 import { updateCopyrightYear } from "./currentyear.js";
 
 async function displayBlogPosts() {
@@ -12,7 +12,7 @@ async function displayBlogPosts() {
     const blogPostsContainer = document.getElementById("blog-posts-all");
     const posts = await fetchBlogPosts();
 
-    blogPostsContainer.classList.remove("hidden");
+    // blogPostsContainer.classList.remove("hidden");
 
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
