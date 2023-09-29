@@ -4,7 +4,7 @@
 @import url("carousel.css");
 @import url("blog.css");
 @import url("forms.css");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Satisfy&display=swap");
 
 :root {
   --clr-light: #ffffff;
@@ -20,7 +20,6 @@
   --clr-primary-600: #993e49;
   --clr-primary-800: #73353c;
   --clr-secondary-200: #e8f1f3;
-  --clr-secondary-600: #5d83a4;
 
   --clr-success: #cfd8b6;
   --clr-error: #73353c;

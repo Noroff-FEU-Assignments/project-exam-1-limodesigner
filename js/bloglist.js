@@ -1,7 +1,7 @@
 // @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
 
 import { showLoader, hideLoader } from "./loader.js";
-import { hideButton, showButton } from "./hideButton.js";
+import { hideButton, showButton } from "./toggleButton.js";
 import { fetchBlogPosts } from "./api.js";
 import { updateCopyrightYear } from "./currentyear.js";
 import { renderPosts } from "./ui/posts/renderPosts.js";
