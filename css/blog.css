@@ -189,12 +189,11 @@ article.blog-wrapper {
 }
 
 .background {
-  background-color: var(--clr-primary-200);
+  background-color: var(--clr-secondary-200);
   padding: var(--space-1);
 }
 
 /* --- bloglist ---*/
-
 
 /* ----- mediaqueries ----*/
 
