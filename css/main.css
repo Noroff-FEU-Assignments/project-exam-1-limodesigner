@@ -139,7 +139,7 @@ footer {
 
   .nav-toggle {
     position: fixed;
-    background-image: url(/img/add.png);
+    background-image: url(/img/add-icon.svg);
     background-repeat: no-repeat;
     border: 0;
     width: 44px;
@@ -153,12 +153,12 @@ footer {
   }
 
   .nav-toggle[aria-expanded="true"] {
-    background-image: url(/img/close.png);
+    background-image: url(/img/close-icon.svg);
   }
 
   .logo-icon {
     position: fixed;
-    background-image: url(/img/logo-icon3.png);
+    background-image: url(/img/home-icon.svg);
     background-repeat: no-repeat;
     border: 0;
     width: 44px;
