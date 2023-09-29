@@ -12,6 +12,7 @@ let currentPage = 1;
 
 async function displayBlogPosts() {
   showLoader();
+  hideButton();
 
   const blogPostsContainer = document.getElementById("blog-posts-all");
   const {
@@ -30,12 +31,9 @@ async function displayBlogPosts() {
   posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   hideLoader();
-
-  hideButton();
+  showButton();
 
   renderPosts(posts, blogPostsContainer);
-
-  showButton();
 
   if (totalPages === currentPage) {
     document.getElementById("load-more").style.display = "none";
