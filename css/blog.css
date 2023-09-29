@@ -19,7 +19,7 @@
   width: min(98%, 1200px);
   display: grid;
   grid-auto-flow: row;
-  gap: 1rem;
+  gap: var(--space-1);
   margin: auto;
 }
 
@@ -48,7 +48,7 @@
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 2rem auto;
+  margin: var(--space-2) auto;
   border-radius: var(--border-radius);
 }
 
@@ -179,7 +179,7 @@ article.blog-wrapper {
 
 .blog-content {
   max-width: 750px;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-2);
 }
 
 .blog-date {
@@ -209,7 +209,7 @@ article.blog-wrapper {
 
   .blog-container-cards {
     display: flex;
-    gap: 2rem;
+    gap: var(--space-2);
     padding: 0;
   }
 }

@@ -1,6 +1,6 @@
 /*  @author Linda Moenstre 2023 - <linda@digitaldesigner.no> */
 
-/* header, footer */
+/* header, navigation and footer */
 
 header {
   position: relative;
@@ -11,7 +11,7 @@ header {
 
 .desktop {
   max-width: 950px;
-  margin: 2rem 1rem;
+  margin: var(--space-2) var(--space-1);
 }
 
 .logo {
@@ -48,7 +48,7 @@ header {
   display: flex;
   justify-content: center;
   border-radius: 50%;
-  bottom: 1rem;
+  bottom: var(--space-1);
   left: 45%;
   z-index: 800;
 }
@@ -65,7 +65,7 @@ footer {
 }
 
 .footer__items {
-  padding: 0 3rem;
+  padding: 0 var(--space-3);
 }
 
 .footer__item {
@@ -92,7 +92,7 @@ footer {
 }
 
 .footer_item img {
-  padding: 5rem 3rem;
+  padding: 5rem var(--space-3);
 }
 
 /* ---------- Media Queries -------------*/
@@ -132,7 +132,7 @@ footer {
   .nav-style:visited {
     color: var(--clr-light);
     background-color: var(--clr-primary-400);
-    padding: 1rem 2rem;
+    padding: var(--space-1) var(--space-2);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
   }
@@ -145,8 +145,8 @@ footer {
     width: 44px;
     height: 44px;
     aspect-ratio: 1;
-    bottom: 1rem;
-    right: 3rem;
+    bottom: var(--space-1);
+    right: var(--space-3);
     border-radius: 50%;
     box-shadow: var(--box-shadow);
     z-index: 910;
@@ -163,8 +163,8 @@ footer {
     border: 0;
     width: 45px;
     height: 44px;
-    bottom: 1rem;
-    left: 3rem;
+    bottom: var(--space-1);
+    left: var(--space-3);
     z-index: 900;
   }
 
@@ -229,12 +229,12 @@ footer {
   }
 
   footer {
-    padding: 0 1rem;
+    padding: 0 var(--space-1);
   }
 }
 
 @media only screen and (min-width: 1024) {
   footer {
-    padding: 0 2rem;
+    padding: 0 var(--space-2);
   }
 }

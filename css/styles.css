@@ -30,13 +30,11 @@
   --ff-body: "Poppins", sans-serif;
   --ff-heading: "Poppins", sans-serif;
   --ff-handwriting: "Satisfy", cursive;
-  --fs-300: 14px; /* thin */
-  --fs-400: 18px; /* regular/text */
-  --fs-500: 20px; /* h4 */
-  --fs-600: 24px; /* H3 */
+  --fs-300: 14px;
+  --fs-500: 20px;
+  --fs-600: 24px;
   --fs-700: 28px;
-  --fs-800: 36px; /* H2 */
-  --fs-900: 56px; /* H1 */
+  --fs-800: 36px;
 
   --letter-spacing: 4px;
 
@@ -143,7 +141,7 @@ h4 {
 }
 
 p {
-  padding: 1rem 0;
+  padding: var(--space-1) 0;
 }
 
 .align__center {
@@ -239,7 +237,7 @@ a:visited {
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  margin-left: 1rem;
+  margin-left: var(--space-1);
 }
 .read-more-button:before {
   content: "";
