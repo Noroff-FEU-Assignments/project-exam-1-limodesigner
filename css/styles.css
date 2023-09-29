@@ -433,7 +433,7 @@ aside {
 
   .active {
     color: var(--clr-dark);
-    border-bottom: 3px dashed var(--clr-neutral-400);
+    border-bottom: 3px dashed var(--clr-primary-400);
   }
 
   .content__wrapper {
