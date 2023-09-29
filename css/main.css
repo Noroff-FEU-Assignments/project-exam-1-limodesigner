@@ -168,7 +168,7 @@ footer {
     z-index: 900;
   }
 
-  .bottom {
+  .bottom-nav {
     position: fixed;
     background-image: linear-gradient(
       to bottom,
