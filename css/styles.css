@@ -62,7 +62,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* background-color: var(--clr-light); */
   margin-left: auto;
   margin-right: auto;
   height: 100%;
@@ -91,7 +90,6 @@ li,
 h1,
 h2,
 h3,
-h4,
 li,
 p,
 .nav-toggle {
@@ -112,7 +110,6 @@ select {
 h1,
 h2,
 h3,
-h4,
 li,
 p {
   text-wrap: balance;
@@ -134,10 +131,6 @@ h3 {
   color: var(--clr-primary-600);
   font-size: var(--fs-500);
   font-weight: 500;
-}
-
-h4 {
-  font-size: var(--fs-500);
 }
 
 p {
@@ -172,7 +165,11 @@ a:visited {
   border-bottom: 2px dotted var(--clr-primary-200);
 }
 
-/* Buttons inspiation from Ian Lunn @ https://github.com/IanLunn/Hover#css */
+::selection {
+  background-color: var(--clr-primary-200);
+}
+
+/* Button inspiation from Ian Lunn @ https://github.com/IanLunn/Hover#css */
 .button {
   background-color: var(--clr-dark);
   color: var(--clr-light);
@@ -273,6 +270,8 @@ a:visited {
   transform: scaleY(1);
 }
 
+/* --- Blog-button by me --- */
+
 .blog-button-container {
   display: flex;
   justify-content: center;
@@ -307,10 +306,6 @@ a:visited {
   width: 1px;
   height: 1px;
   overflow: hidden;
-}
-
-::selection {
-  background-color: var(--clr-primary-200);
 }
 
 .skip {
@@ -402,6 +397,11 @@ aside {
   margin-right: auto;
 }
 
+.team__title {
+  font-family: var(--ff-handwriting);
+  font-size: var(--fs-700);
+}
+
 .loader {
   position: absolute;
   left: 50%;
@@ -424,15 +424,6 @@ aside {
   }
 }
 
-/* .hide-loader {
-  display: none;
-} */
-
-.team__title {
-  font-family: var(--ff-handwriting);
-  font-size: var(--fs-700);
-}
-
 /* ---------- Media Queries -------------*/
 
 @media only screen and (min-width: 769px) {
@@ -442,7 +433,7 @@ aside {
 
   .active {
     color: var(--clr-dark);
-    border-bottom: 2px dotted var(--clr-primary-600);
+    border-bottom: 3px dashed var(--clr-neutral-400);
   }
 
   .content__wrapper {
