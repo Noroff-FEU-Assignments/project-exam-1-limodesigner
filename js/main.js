@@ -3,10 +3,9 @@
 import { showLoader, hideLoader } from "./loader.js";
 import { displayBlogCard } from "./blogpostbyid.js";
 import { updateCopyrightYear } from "./currentyear.js";
+import { apiEndpoint } from "./constants/api.js";
 
-const baseUrl = "https://sweetheartembroidery.com";
-const apiEndpoint = "/wp-json/wp/v2/posts";
-const apiPosts = baseUrl + apiEndpoint;
+const apiPosts = `${apiEndpoint}posts`;
 
 export async function fetchBlogPosts(start = 0, perPage = 10) {
   try {
