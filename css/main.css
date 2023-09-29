@@ -106,10 +106,6 @@ footer {
     display: none;
   }
 
-  .left {
-    display: none; /* Hide the left column on mobile */
-  }
-
   .primary-navigation {
     position: fixed;
     flex-direction: column;
