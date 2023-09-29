@@ -28,7 +28,7 @@ export async function fetchBlogPosts(start = 0, perPage = 10) {
   }
 }
 
-displayBlogCard(332, "blogCard332");
-displayBlogCard(355, "blogCard355");
+displayBlogCard(315, "blogCard315");
+displayBlogCard(308, "blogCard308");
 
 updateCopyrightYear();

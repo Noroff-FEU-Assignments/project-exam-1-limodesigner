@@ -99,8 +99,6 @@
   border-radius: var(--border-radius);
 }
 
-/* --- blog.html --- */
-
 .blog-wrapper {
   padding: 0.625rem;
   border-radius: var(--border-radius);
@@ -141,7 +139,7 @@ article.blog-wrapper {
   margin-bottom: 10px;
 }
 
-/* modal */
+/* ---  modal --- */
 .modal {
   display: none;
   position: fixed;
@@ -192,8 +190,6 @@ article.blog-wrapper {
   background-color: var(--clr-secondary-200);
   padding: var(--space-1);
 }
-
-/* --- bloglist ---*/
 
 /* ----- mediaqueries ----*/
 

@@ -50,7 +50,7 @@ span.hide {
   text-align: center;
   margin: var(--space-2);
   padding: var(--space-2);
-  border-radius: 50%;
+  border-radius: var(--border-radius);
 }
 
 .form__img {
