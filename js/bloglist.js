@@ -1,6 +1,7 @@
 // @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
 
 import { showLoader, hideLoader } from "./loader.js";
+import { hideButton, showButton } from "./hideButton.js";
 import { fetchBlogPosts } from "./api.js";
 import { updateCopyrightYear } from "./currentyear.js";
 import { renderPosts } from "./ui/posts/renderPosts.js";
@@ -30,19 +31,17 @@ async function displayBlogPosts() {
 
   hideLoader();
 
+  hideButton();
+
   renderPosts(posts, blogPostsContainer);
+
+  showButton();
 
   if (totalPages === currentPage) {
     document.getElementById("load-more").style.display = "none";
   }
 
   currentPage++;
-
-  if (totalPages === currentPage) {
-    document.getElementById("load-more").classList.add("hide-button");
-  } else {
-    document.getElementById("load-more").classList.remove("hide-button");
-  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
