@@ -1,9 +1,9 @@
-<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="44" height="44" rx="22" fill="#993E49"/>
-<mask id="mask0_851_608" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="40" height="40">
-<rect x="2" y="2" width="40" height="40" fill="#D9D9D9"/>
+<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.991699" y="0.267578" width="44" height="44" rx="22" fill="#993E49"/>
+<mask id="mask0_883_459" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="10" width="25" height="25">
+<rect x="10.9917" y="10.2676" width="24" height="24" fill="#D9D9D9"/>
 </mask>
-<g mask="url(#mask0_851_608)">
-<path d="M20.5714 23.4286H10V20.5714H20.5714V10H23.4286V20.5714H34V23.4286H23.4286V34H20.5714V23.4286Z" fill="white"/>
+<g mask="url(#mask0_883_459)">
+<path d="M6.4917 33.2676V29.6009H39.4917V33.2676H6.4917ZM6.4917 24.1009V20.4342H39.4917V24.1009H6.4917ZM6.4917 14.9342V11.2676H39.4917V14.9342H6.4917Z" fill="white"/>
 </g>
 </svg>
