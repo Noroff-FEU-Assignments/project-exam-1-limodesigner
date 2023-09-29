@@ -162,14 +162,14 @@ a:visited {
 
 .active {
   color: var(--clr-dark);
-  border-bottom: 2px dotted var(--clr-primary-200);
+  border-bottom: 3px dashed var(--clr-light);
 }
 
 ::selection {
   background-color: var(--clr-primary-200);
 }
 
-/* Button inspiation from Ian Lunn @ https://github.com/IanLunn/Hover#css */
+/* Buttoninspiation from Ian Lunn @ https://github.com/IanLunn/Hover#css */
 .button {
   background-color: var(--clr-dark);
   color: var(--clr-light);
