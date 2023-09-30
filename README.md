@@ -54,8 +54,8 @@ Netlify: https://sweetheartembroidery.netlify.app/
 
 ## Screenshots of the process
 
-<img src="/img/navbar-discussion.jpg">
+<img src="/img/navbar-discussions.jpg">
 
-<img src="/img/mobile-figma.jpg">
+<img src="/img/mobile-figma.png">
 
 <img src="/img/desktop-figma.jpg">
