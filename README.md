@@ -29,7 +29,7 @@ The process was exiting, due to a one week setback because of the flu. Of the fi
 - https://fonts.google.com/
 - https://fonts.google.com/icons
   <br>
-    <br>
+  <br>
 - HTML
 - CS
 - JavaScript
@@ -58,4 +58,4 @@ Netlify: https://sweetheartembroidery.netlify.app/
 
 <img src="/img/mobile-figma.png">
 
-<img src="/img/desktop-figma.jpg">
+<img src="/img/desktop-figma.png">
