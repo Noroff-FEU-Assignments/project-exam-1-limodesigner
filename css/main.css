@@ -106,10 +106,6 @@ footer {
     display: none;
   }
 
-  .the-dot {
-    display: none;
-  }
-
   .primary-navigation {
     position: fixed;
     flex-direction: column;
