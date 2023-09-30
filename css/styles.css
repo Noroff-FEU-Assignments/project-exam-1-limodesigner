@@ -255,12 +255,9 @@ a:visited {
 }
 .read-more-button:hover,
 .read-more-button:focus,
-.read-more-button:active {
-  color: var(--clr-light);
-}
-
+.read-more-button:active,
 .read-more-button:visited {
-  color: var(--clr-primary-800);
+  color: var(--clr-light);
 }
 
 .read-more-button:hover:before,
