@@ -221,6 +221,7 @@ a:visited {
 
 .read-more-button {
   background-color: var(--clr-neutral-200);
+  color: inherit;
   border: 1px solid var(--clr-primary-600);
   padding: 0.5rem var(--space-1);
   border-radius: var(--border-radius);
