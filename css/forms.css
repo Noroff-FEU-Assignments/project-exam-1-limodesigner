@@ -42,6 +42,7 @@ span.hide {
 .form-error {
   background-color: var(--clr-error);
   color: var(--clr-light);
+  padding-left: 0.3rem;
   display: none;
 }
 

@@ -171,6 +171,7 @@ a:visited {
 /* Buttoninspiation from Ian Lunn @ https://github.com/IanLunn/Hover#css */
 .button {
   background-color: var(--clr-dark);
+  border: none;
   color: var(--clr-light);
   padding: 0.5rem var(--space-1);
   border-radius: var(--border-radius);
@@ -193,7 +194,7 @@ a:visited {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--clr-primary-800);
+  background: var(--clr-primary-600);
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: 50% 0;
