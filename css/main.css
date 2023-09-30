@@ -106,6 +106,10 @@ footer {
     display: none;
   }
 
+  .the-dot {
+    display: none;
+  }
+
   .primary-navigation {
     position: fixed;
     flex-direction: column;
@@ -138,8 +142,9 @@ footer {
   }
 
   .nav-toggle {
+    display: block;
     position: fixed;
-    background-image: url(/img/add-icon.svg);
+    background-image: url(/img/menu-icon.svg);
     background-repeat: no-repeat;
     border: 0;
     width: 44px;
