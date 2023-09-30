@@ -28,7 +28,7 @@ The process was exiting, due to a one week setback because of the flu. Of the fi
 - ChatGPT for generating blog post content
 - https://fonts.google.com/
 - https://fonts.google.com/icons
-
+  <br>
 - HTML
 - CS
 - JavaScript
