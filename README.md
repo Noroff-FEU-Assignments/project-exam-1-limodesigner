@@ -26,8 +26,8 @@ The process was exiting, due to a one week setback because of the flu. Of the fi
 - Netlify and GitHub
 - Chrome Devtool, Wave and W3C
 - ChatGPT for generating blog post content
-  https://fonts.google.com/
-  https://fonts.google.com/icons
+- https://fonts.google.com/
+- https://fonts.google.com/icons
 
 - HTML
 - CS
