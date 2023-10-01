@@ -1,7 +1,7 @@
 // @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
 
-import { updateCopyrightYear } from "./currentyear.js";
-import { fetchBlogPosts } from "./main.js";
+import { updateCopyrightYear } from "../../constants/currentyear.js";
+import { fetchBlogPosts } from "../../main.js";
 
 const carousel = document.querySelector(".carousel");
 const prevButton = document.querySelector(".prev-button");

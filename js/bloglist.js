@@ -1,11 +1,11 @@
 // @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
 
-import { showLoader, hideLoader } from "./loader.js";
-import { hideButton, showButton } from "./toggleButton.js";
-import { fetchBlogPosts } from "./api.js";
-import { updateCopyrightYear } from "./currentyear.js";
+import { showLoader, hideLoader } from "./ui/common/loader.js";
+import { hideButton, showButton } from "./ui/common/toggleButton.js";
+import { fetchBlogPosts } from "./ui/posts/getPosts.js";
 import { renderPosts } from "./ui/posts/renderPosts.js";
 import { displayMessage } from "./ui/common/displayMessage.js";
+import { updateCopyrightYear } from "./constants/currentyear.js";
 
 const postsPerPage = 10;
 let currentPage = 1;

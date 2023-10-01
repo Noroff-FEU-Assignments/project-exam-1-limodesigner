@@ -1,6 +1,6 @@
 // @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
 
-import { updateCopyrightYear } from "./currentyear.js";
+import { updateCopyrightYear } from "../../constants/currentyear.js";
 
 const form = document.querySelector("#form");
 

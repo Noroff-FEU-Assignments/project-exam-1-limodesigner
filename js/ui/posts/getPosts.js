@@ -1,7 +1,7 @@
 // @author Linda Moenstre 2023 - <linda@digitaldesigner.no>
 
-import { showLoader, hideLoader } from "./loader.js";
-import { apiEndpoint } from "./constants/api.js";
+import { showLoader } from "../common/loader.js";
+import { apiEndpoint } from "../../constants/api.js";
 
 const apiPosts = `${apiEndpoint}posts`;
 
