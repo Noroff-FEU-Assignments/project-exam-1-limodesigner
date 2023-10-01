@@ -4,6 +4,7 @@ A headless Wordpress REST API blog about my favourite subject - machine and hand
 
 ## Noroff Project Exame 1 for Frontend development
 
+<img src="/img/sweetheart_logo-mobile.gif">
 <img src="/img/sweetheartembroidery-theproject.jpg">
 
 ## What was the brief?
