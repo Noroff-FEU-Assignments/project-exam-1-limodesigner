@@ -9,12 +9,6 @@
   margin: var(--space-1) 0;
 }
 
-.blog-header__form {
-  background-color: var(--clr-primary-200);
-  border: none;
-  border-radius: var(--border-radius);
-}
-
 .blog-posts-grid {
   width: min(98%, 1200px);
   display: grid;
@@ -139,7 +133,6 @@ article.blog-wrapper {
   margin-bottom: 10px;
 }
 
-/* ---  modal --- */
 .modal {
   display: none;
   position: fixed;
@@ -191,7 +184,7 @@ article.blog-wrapper {
   padding: var(--space-1);
 }
 
-/* ----- mediaqueries ----*/
+/* ----- mediaqueries ----- */
 
 @media screen and (min-width: 769px) {
   .blog-wrapper img {

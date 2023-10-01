@@ -95,7 +95,7 @@ footer {
   padding: 5rem var(--space-3);
 }
 
-/* ---------- Media Queries -------------*/
+/* ----- mediaqueries -----*/
 
 @media (max-width: 768px) {
   .desktop {
