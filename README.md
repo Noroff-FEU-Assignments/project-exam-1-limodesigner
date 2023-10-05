@@ -32,7 +32,7 @@ The process was exiting, due to a one week setback because of the flu. Of the fi
   <br>
   <br>
 - HTML
-- CS
+- CSS
 - JavaScript
 
 ## What helped me achieve this?
