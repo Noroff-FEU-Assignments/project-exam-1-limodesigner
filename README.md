@@ -57,16 +57,15 @@ Netlify: https://sweetheartembroidery.netlify.app/
 
 <img src="/img/sweetheart_logo-desktop.gif">
 
+<img src="/img/navbar-discussions.jpg">
+
+<img src="/img/mobile-figma.png">
+
+<img src="/img/desktop-figma.png">
+
 ## Taking a closer look and run the app?
 
 Clone the repo and install with npm install command in you editors terminal. Run the app by npm run start.
 
 # Contact
 linda@digitaldesigner.no - let's work togheter!
-
-
-<img src="/img/navbar-discussions.jpg">
-
-<img src="/img/mobile-figma.png">
-
-<img src="/img/desktop-figma.png">
